@@ -35,6 +35,6 @@ void listarRevisionsPorExpediente (Lista l, long codigo);
 //Devuelvela cantidad de revisiones por fecha
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);
 
-void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas, int &pPendientes)
+void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas, int &pPendientes);
 
 #endif // LISTAREVISION_H_INCLUDED

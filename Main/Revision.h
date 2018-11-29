@@ -2,7 +2,9 @@
 #define REVISION_H_INCLUDED
 #include "Fecha.h"
 #include "Resultado.h"
-#include "Expediente.h"
+//#include "Expediente.h"
+#include "string.h"
+
 
 typedef struct {Fecha fchRealizacion;
                 String motivo;
@@ -12,7 +14,11 @@ typedef struct {Fecha fchRealizacion;
 
 //Carga una revision
 void cargarRevision(Revision &rev);
+//PRECONDICION: se debe validar que exista el codigo de Expediente
 
+/*void cargarRevision(Revision &rev, long codigoExp);
+//PRECONDICION: se debe validar que exista el código de Expediente
+*/
 //Muestra la revision
 void mostrarRevision(Revision rev);
 //PRECONDICION: La revision debe existir

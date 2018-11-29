@@ -12,6 +12,7 @@ typedef struct {long codigo;
 
 //Carga el expediente
 void cargarExpediente(Expediente &exp);
+//PRECONDICION: se debe validar que NO exista el código de Expediente
 
 //Muestra los datos del expediente
 void mostrarExpediente (Expediente exp);

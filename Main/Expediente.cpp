@@ -1,7 +1,5 @@
 #include "Expediente.h"
 
-#include "Expediente.h"
-
 void cargarExpediente(Expediente &exp)
 {
     printf("\INGRESE LOS DATOS EL EXPEDIENTE");
@@ -23,7 +21,29 @@ void cargarExpediente(Expediente &exp)
     printf("\nCantidad de paginas: ");
     scanf("%d", &exp.cantidadPaginas);
 }
+/*
+void cargarExpediente(Expediente &exp, long codigo)
+{
+    exp.codigo = codigo;
 
+    printf("\nINGRESE LOS DATOS EL EXPEDIENTE");
+
+    printf("\nCaratula: ");
+    strcrear(exp.caratula);
+    scan(exp.caratula);
+
+    printf("\nNombre del escribana/o: ");
+    strcrear(exp.nombre);
+    scan(exp.nombre);
+
+    printf("\nApellido del escribana/o: ");
+    strcrear(exp.apellido);
+    scan(exp.apellido);
+
+    printf("\nCantidad de paginas: ");
+    scanf("%d", &exp.cantidadPaginas);
+}
+*/
 void mostrarExpediente (Expediente exp)
 {
     printf("\n**Datos del Expediente:** ");

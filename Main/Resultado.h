@@ -2,7 +2,7 @@
 #define RESULTADO_H_INCLUDED
 #include <stdio.h>
 
-typedef enum {satisfacoria, incompleta, pendiente} resultado;
+typedef enum {Satisfacoria, Incompleta, Pendiente} resultado;
 
 void mostrarResultado(resultado r);
 

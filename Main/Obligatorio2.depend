@@ -188,3 +188,67 @@
 	"string.h"
 	"boolean.h"
 
+1543450316 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\archivo.cpp
+
+1543455385 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\expediente.cpp
+	"Expediente.h"
+
+1543463717 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\expediente.h
+	"String.h"
+
+1543374698 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\string.h
+	"Boolean.h"
+
+1543321936 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\boolean.h
+	<stdio.h>
+
+1543450754 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\fecha.cpp
+	"Fecha.h"
+
+1543283439 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\fecha.h
+	"Boolean.h"
+
+1543463239 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\revision.cpp
+	"Revision.h"
+
+1543463980 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"string.h"
+
+1543463124 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\resultado.h
+	<stdio.h>
+
+1543463263 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\listarevision.cpp
+	"ListaRevision.h"
+
+1543460046 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\listarevision.h
+	"Revision.h"
+	"Expediente.h"
+
+1543462000 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543276717 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\menu.h
+	"Boolean.h"
+
+1543450287 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\arbol.h
+	"Expediente.h"
+
+1543186973 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\archivo.h
+
+1543462558 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\resultado.cpp
+	"Resultado.h"
+
+1543375543 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\string.cpp
+	"string.h"
+	"boolean.h"
+
+1543463449 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\arbol.cpp
+	"Arbol.h"
+

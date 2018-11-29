@@ -7,7 +7,6 @@ void strcrear (String &s)
     s[0] = '\0';
 }
 
-
 void strdestruir (String &s)
 {
     delete [] s;
@@ -50,7 +49,7 @@ boolean streq(String s1,String s2)
     {
         if (s1[i] != s2[i])
             iguales = FALSE;
-            i++;
+        i++;
     }
     if ((s1[i] != '\0') || (s2[i] != '\0'))
         iguales = FALSE;
@@ -63,18 +62,18 @@ void strcop (String &s1,String s2)
     int largo = strlar(s2) + 1;
     delete [] s1;
     s1 = new char[largo];
-        while (s2[i] != '\0')
-        {
-            s1[i] = s2[i];
-            i++;
-        }
+    while (s2[i] != '\0')
+    {
+        s1[i] = s2[i];
+        i++;
+    }
     s1[i] = '\0';
 }
 
 int strlar (String s)
 {
     int i = 0;
-        while (s[i] != '\0')
+    while (s[i] != '\0')
         i++;
     return i;
 }

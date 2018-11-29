@@ -5,13 +5,13 @@ void mostrarResultado(resultado r)
 {
     switch(r)
     {
-    case satisfacoria:
+    case Satisfacoria:
         printf("Satisfactoria\n");
         break;
-    case incompleta:
+    case Incompleta:
         printf("Incompleta\n");
         break;
-    case pendiente:
+    case Pendiente:
         printf("Pendiente\n");
         break;
     }

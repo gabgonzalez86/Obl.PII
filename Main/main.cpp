@@ -23,14 +23,23 @@ int main()
         printf("\nLa fecha 2 es mayor.");
 
 */
-/*Prueba expediente
- Expediente vExp;
+//Prueba expediente
+ /*Expediente vExp;
  cargarExpediente(vExp);
- mostrarExpediente(vExp);
- */
+ mostrarExpediente(vExp);*/
+ //
 
  //Prueba expediente
-Revision vRev;
+/*Revision vRev;
 cargarRevision(vRev);
-mostrarRevision(vRev);
+mostrarRevision(vRev);*/
+
+//Prueba de listado revision
+
+
+ //Prueba expediente HEBERT
+/*long codigo = 12345;
+Revision vRev;
+cargarRevision(vRev, codigo);
+mostrarRevision(vRev);*/
 }

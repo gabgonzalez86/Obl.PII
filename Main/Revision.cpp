@@ -26,7 +26,31 @@ void cargarRevision(Revision &rev)
     cargarResultado(opcion, rev.resultadoRevision);
 
 }
+/*
+void cargarRevision(Revision &rev, long codigoExp)
+{
+    rev.codigoExpediente = codigoExp;
 
+    printf("\nINGRESE LOS DATOS DE LA REVISION");
+    cargarFecha(rev.fchRealizacion);
+
+    printf("\nMotivo: ");
+    strcrear(rev.motivo);
+    scan(rev.motivo);
+
+    printf("\nIngrese un resultado (1- Satisfacoria, 2-Incompleta, 3- Pendiente ): ");
+    int opcion;
+    scanf("%d",&opcion);
+
+    while(opcion >3 || opcion <1)
+    {
+        printf("Opcion incorrecta.\n");
+        scanf("%d",&opcion);
+    }
+
+    cargarResultado(opcion, rev.resultadoRevision);
+}
+*/
 void mostrarRevision(Revision rev)
 {
     printf("\nDatos de la revision:\n");
@@ -44,14 +68,29 @@ void cargarResultado(int opcion, resultado &resultadoRevision)
     switch(opcion)
     {
     case 1:
-        resultadoRevision = satisfacoria;
+        resultadoRevision = Satisfacoria;
         break;
 
     case 2:
-        resultadoRevision = incompleta;
+        resultadoRevision = Incompleta;
         break;
     case 3:
-        resultadoRevision = pendiente;
+        resultadoRevision = Pendiente;
         break;
     }
+}
+
+Fecha darFechaRevision(Revision rev)
+{
+    return rev.fchRealizacion;
+}
+
+long darCodigoExpediente(Revision rev)
+{
+    return rev.codigoExpediente;
+}
+
+resultado darResultadoRevision(Revision rev)
+{
+    return rev.resultadoRevision;
 }

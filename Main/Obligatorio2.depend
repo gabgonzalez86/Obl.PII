@@ -1,0 +1,190 @@
+# depslib dependency file v1.0
+1535936387 source:c:\users\guillermo\desktop\ude\programación ii\obligatorio2\boolean.cpp
+	"Boolean.h"
+
+1535917335 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\boolean.h
+	<stdio.h>
+
+1542687105 source:c:\users\guillermo\desktop\ude\programación ii\obligatorio2\string.cpp
+	"string.h"
+
+1543187922 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\string.h
+	"Boolean.h"
+
+1543284442 source:c:\users\guillermo\desktop\ude\programación ii\obligatorio2\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543276717 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\menu.h
+	"Boolean.h"
+
+1543276814 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\arbol.h
+	"Expediente.h"
+
+1543276054 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\expediente.h
+	"String.h"
+
+1543276077 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\revision.h
+	"Fecha.h"
+	"Resultado.h"
+
+1543283439 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\fecha.h
+	"Boolean.h"
+
+1543186491 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\resultado.h
+
+1543186973 c:\users\guillermo\desktop\ude\programación ii\obligatorio2\archivo.h
+
+1543284722 source:c:\users\guillermo\desktop\ude\programación ii\obligatorio2\fecha.cpp
+	"Fecha.h"
+
+1535936387 source:c:\users\java\desktop\obligatorio2\boolean.cpp
+	"Boolean.h"
+
+1535917335 c:\users\java\desktop\obligatorio2\boolean.h
+	<stdio.h>
+
+1543321490 source:c:\users\java\desktop\obligatorio2\expediente.cpp
+	"Expediente.h"
+
+1543320478 c:\users\java\desktop\obligatorio2\expediente.h
+	"String.h"
+
+1543187922 c:\users\java\desktop\obligatorio2\string.h
+	"Boolean.h"
+
+1543284722 source:c:\users\java\desktop\obligatorio2\fecha.cpp
+	"Fecha.h"
+
+1543283439 c:\users\java\desktop\obligatorio2\fecha.h
+	"Boolean.h"
+
+1543321504 source:c:\users\java\desktop\obligatorio2\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543276717 c:\users\java\desktop\obligatorio2\menu.h
+	"Boolean.h"
+
+1543321104 c:\users\java\desktop\obligatorio2\arbol.h
+	"Expediente.h"
+
+1543318633 c:\users\java\desktop\obligatorio2\revision.h
+	"Fecha.h"
+	"Resultado.h"
+
+1543186491 c:\users\java\desktop\obligatorio2\resultado.h
+
+1543186973 c:\users\java\desktop\obligatorio2\archivo.h
+
+1542687105 source:c:\users\java\desktop\obligatorio2\string.cpp
+	"string.h"
+
+1543373960 source:c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543276717 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\menu.h
+	"Boolean.h"
+
+1543321936 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\boolean.h
+	<stdio.h>
+
+1543321104 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\arbol.h
+	"Expediente.h"
+
+1543320478 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\expediente.h
+	"String.h"
+
+1543374698 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\string.h
+	"Boolean.h"
+
+1543318633 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\revision.h
+	"Fecha.h"
+	"Resultado.h"
+
+1543283439 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\fecha.h
+	"Boolean.h"
+
+1543186491 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\resultado.h
+
+1543186973 c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\archivo.h
+
+1543284722 source:c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\fecha.cpp
+	"Fecha.h"
+
+1543375543 source:c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\string.cpp
+	"string.h"
+	"boolean.h"
+
+1543376648 source:c:\users\usuario\desktop\obligatorio2.27112018_0\obligatorio2\expediente.cpp
+	"Expediente.h"
+	"Expediente.h"
+
+1543450316 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\archivo.cpp
+
+1543450591 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\expediente.cpp
+	"Expediente.h"
+	"Expediente.h"
+
+1543450623 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\expediente.h
+	"String.h"
+
+1543374698 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\string.h
+	"Boolean.h"
+
+1543321936 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\boolean.h
+	<stdio.h>
+
+1543450754 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\fecha.cpp
+	"Fecha.h"
+
+1543283439 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\fecha.h
+	"Boolean.h"
+
+1543451127 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543276717 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\menu.h
+	"Boolean.h"
+
+1543450287 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\arbol.h
+	"Expediente.h"
+
+1543451334 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"Expediente.h"
+
+1543450913 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\resultado.h
+	<stdio.h>
+
+1543186973 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\archivo.h
+
+1543450881 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\resultado.cpp
+	"Resultado.h"
+
+1543451494 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\revision.cpp
+	"Revision.h"
+
+1543375543 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio28112018_0\string.cpp
+	"string.h"
+	"boolean.h"
+

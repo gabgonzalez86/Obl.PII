@@ -11,7 +11,7 @@ typedef struct {long codigo;
 
 
 //Carga el expediente
-void cargarExpediente(Expediente &exp);
+void cargarExpediente(Expediente &exp, long codigo);
 //PRECONDICION: se debe validar que NO exista el código de Expediente
 
 //Muestra los datos del expediente
@@ -22,16 +22,16 @@ void mostrarExpediente (Expediente exp);
 long darCodigo(Expediente exp);
 //PRECONDICION: El expediente debe existir
 
-//Muestra el nombre del escribano
-void darNombreExpediente(Expediente exp);
+//Devuelve el nombre del escribano
+void darNombreExpediente(Expediente exp, String &pNombre);
 //PRECONDICION: El expediente no puede estar vacio
 
-//Muestra el apellido del escribano
-void darApellidoExpediente(Expediente exp);
+//Devuelve el apellido del escribano
+void darApellidoExpediente(Expediente exp, String &pApellido);
 //PRECONDICION: El expediente no puede estar vacio
 
-//Muestra la caratula del expediente
-void darCaratula(Expediente exp);
+//Devuelve la caratula del expediente
+void darCaratula(Expediente exp, String &pCaratula);
 //PRECONDICION: El expediente no puede estar vacio
 
 //Devuelve la cantidad de paginas del expediente

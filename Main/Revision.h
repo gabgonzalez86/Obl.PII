@@ -13,12 +13,12 @@ typedef struct {Fecha fchRealizacion;
                 }Revision;
 
 //Carga una revision
-void cargarRevision(Revision &rev);
+//void cargarRevision(Revision &rev);
 //PRECONDICION: se debe validar que exista el codigo de Expediente
 
-/*void cargarRevision(Revision &rev, long codigoExp);
+void cargarRevision(Revision &rev, long codigoExp);
 //PRECONDICION: se debe validar que exista el código de Expediente
-*/
+
 //Muestra la revision
 void mostrarRevision(Revision rev);
 //PRECONDICION: La revision debe existir
@@ -32,7 +32,7 @@ Fecha darFechaRevision(Revision rev);
 //PRECONDICION: La revision debe existir
 
 //Devuelve el motivo de la revision
-void darMotivo(Revision rev);
+void darMotivo(Revision rev, String &pMotivo);
 //PRECONDICION: La revision debe existir
 
 //Se obtiene el codigo del expediente asociado a la revision

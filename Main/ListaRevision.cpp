@@ -64,7 +64,7 @@ int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
     int cntRevisiones = 0;
     while(l != NULL)
     {
-        if((darAnio(darFechaRevision(l -> revisiones)) >= darAnio(fec1) && darMes(darFechaRevision(l -> revisiones)) >= darMes(fec1) && darDia(darFechaRevision(l -> revisiones)) >= darDia(fec1))&& (darAnio(darFechaRevision(l -> revisiones)) <= darAnio(fec2) && darMes(darFechaRevision(l -> revisiones)) <= darMes(fec2) && darDia(darFechaRevision(l -> revisiones)) <= darDia(fec2)))
+        if(esMayor(l->revisiones.fchRealizacion, fec1) && !esMayor(l->revisiones.fchRealizacion, fec2))
         {
             cntRevisiones++;
         }
@@ -79,13 +79,13 @@ void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas,
     {
         switch(darResultadoRevision(l -> revisiones))
         {
-        case 1:
+        case Satisfacoria:
             pSatisfactorias++;
             break;
-        case 2:
+        case Incompleta:
             pIncompletas++;
             break;
-        case 3:
+        case Pendiente:
             pPendientes++;
             break;
         }

@@ -1,5 +1,6 @@
 #include "Revision.h"
 
+/*
 void cargarRevision(Revision &rev)
 {
     printf("\nINGRESE LOS DATOS DE LA REVISION");
@@ -26,7 +27,7 @@ void cargarRevision(Revision &rev)
     cargarResultado(opcion, rev.resultadoRevision);
 
 }
-/*
+*/
 void cargarRevision(Revision &rev, long codigoExp)
 {
     rev.codigoExpediente = codigoExp;
@@ -50,7 +51,7 @@ void cargarRevision(Revision &rev, long codigoExp)
 
     cargarResultado(opcion, rev.resultadoRevision);
 }
-*/
+
 void mostrarRevision(Revision rev)
 {
     printf("\nDatos de la revision:\n");
@@ -85,6 +86,12 @@ Fecha darFechaRevision(Revision rev)
     return rev.fchRealizacion;
 }
 
+void darMotivo(Revision rev, String &pMotivo)
+{
+    strcrear(pMotivo);
+    strcop(pMotivo, rev.motivo);
+}
+
 long darCodigoExpediente(Revision rev)
 {
     return rev.codigoExpediente;
@@ -94,3 +101,5 @@ resultado darResultadoRevision(Revision rev)
 {
     return rev.resultadoRevision;
 }
+
+

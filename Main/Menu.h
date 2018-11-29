@@ -4,6 +4,11 @@
 
 void mostrarMenu();
 
+void mostrarSubMenuListados(int opcion);
+
+void mostrarSubMenuConsultas(int opcion);
+
+
 boolean validarOpcionMenu(int opcion);
 
 #endif // MENU_H_INCLUDED

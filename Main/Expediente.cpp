@@ -1,5 +1,5 @@
 #include "Expediente.h"
-
+/*
 void cargarExpediente(Expediente &exp)
 {
     printf("\INGRESE LOS DATOS EL EXPEDIENTE");
@@ -20,8 +20,8 @@ void cargarExpediente(Expediente &exp)
 
     printf("\nCantidad de paginas: ");
     scanf("%d", &exp.cantidadPaginas);
-}
-/*
+}*/
+
 void cargarExpediente(Expediente &exp, long codigo)
 {
     exp.codigo = codigo;
@@ -43,7 +43,7 @@ void cargarExpediente(Expediente &exp, long codigo)
     printf("\nCantidad de paginas: ");
     scanf("%d", &exp.cantidadPaginas);
 }
-*/
+
 void mostrarExpediente (Expediente exp)
 {
     printf("\n**Datos del Expediente:** ");
@@ -54,7 +54,7 @@ void mostrarExpediente (Expediente exp)
     print(exp.nombre);
     printf(" ");
     print(exp.apellido);
-    printf("\nCantidad de paginas: %ld\n", exp.cantidadPaginas);
+    printf("\nCantidad de paginas: %d\n", exp.cantidadPaginas);
 }
 
 long darCodigo(Expediente exp)
@@ -66,3 +66,23 @@ int  darCantidadPaginas (Expediente exp)
 {
     return exp.cantidadPaginas;
 }
+
+void darCaratula(Expediente exp, String &pCaratula)
+{
+    strcrear(pCaratula);
+    strcop(pCaratula, exp.caratula);
+}
+
+void darNombreExpediente(Expediente exp, String &pNombre)
+{
+    strcrear(pNombre);
+    strcop(pNombre, exp.nombre);
+}
+
+
+void darApellidoExpediente(Expediente exp, String &pApellido)
+{
+    strcrear(pApellido);
+    strcop(pApellido, exp.apellido);
+}
+

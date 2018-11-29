@@ -252,3 +252,72 @@
 1543463449 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_28112018_1\arbol.cpp
 	"Arbol.h"
 
+1543492081 source:c:\users\java\desktop\obligatorio_29112018_0\expediente.cpp
+	"Expediente.h"
+
+1543492056 c:\users\java\desktop\obligatorio_29112018_0\expediente.h
+	"String.h"
+
+1543374698 c:\users\java\desktop\obligatorio_29112018_0\string.h
+	"Boolean.h"
+
+1543321936 c:\users\java\desktop\obligatorio_29112018_0\boolean.h
+	<stdio.h>
+
+1543463449 source:c:\users\java\desktop\obligatorio_29112018_0\arbol.cpp
+	"Arbol.h"
+
+1543450287 c:\users\java\desktop\obligatorio_29112018_0\arbol.h
+	"Expediente.h"
+
+1543450316 source:c:\users\java\desktop\obligatorio_29112018_0\archivo.cpp
+
+1543450754 source:c:\users\java\desktop\obligatorio_29112018_0\fecha.cpp
+	"Fecha.h"
+
+1543283439 c:\users\java\desktop\obligatorio_29112018_0\fecha.h
+	"Boolean.h"
+
+1543491942 source:c:\users\java\desktop\obligatorio_29112018_0\listarevision.cpp
+	"ListaRevision.h"
+
+1543460046 c:\users\java\desktop\obligatorio_29112018_0\listarevision.h
+	"Revision.h"
+	"Expediente.h"
+
+1543492153 c:\users\java\desktop\obligatorio_29112018_0\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"string.h"
+
+1543463124 c:\users\java\desktop\obligatorio_29112018_0\resultado.h
+	<stdio.h>
+
+1543463821 source:c:\users\java\desktop\obligatorio_29112018_0\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543492839 c:\users\java\desktop\obligatorio_29112018_0\menu.h
+	"Boolean.h"
+
+1543494057 c:\users\java\desktop\obligatorio_29112018_0\archivo.h
+	"Arbol.h"
+	"ListaRevision.h"
+
+1543462558 source:c:\users\java\desktop\obligatorio_29112018_0\resultado.cpp
+	"Resultado.h"
+
+1543492344 source:c:\users\java\desktop\obligatorio_29112018_0\revision.cpp
+	"Revision.h"
+
+1543464147 source:c:\users\java\desktop\obligatorio_29112018_0\string.cpp
+	"string.h"
+	"boolean.h"
+
+1543492839 source:c:\users\java\desktop\obligatorio_29112018_0\menu.cpp
+	"Menu.h"
+

@@ -1,109 +1,130 @@
 #include "Archivo.h"
 
-/*void agregarExpediente(String nomArch, Expediente pExp)
+void agregarExpediente(String pNomArch, Expediente pExpediente)
 {
-    FILE * f = fopen(nomArch, "ab");
-    fwrite(&entero, sizeof(int), 1, f);
+    FILE * f = fopen(pNomArch, "ab");
+    fwrite(&pExpediente, sizeof(Expediente), 1, f);
     fclose(f);
 }
 
-boolean existe(String nomArch)
-{
-    boolean resultado = FALSE;
 
-    FILE * f = fopen(nomArch, "rb");
+boolean existeExpediente(String pNomArch)
+{
+    boolean vResultado = FALSE;
+
+    FILE * f = fopen(pNomArch, "rb");
 
     if(f==NULL)
-        resultado =  FALSE;
+        vResultado =  FALSE;
     else
        {
-         resultado =  TRUE;
+         vResultado =  TRUE;
          fclose(f);
        }
 
-    return resultado;
+    return vResultado;
 }
 
-boolean Vacio (String nomArch)
+
+
+boolean expedienteVacio (String pNomArch)
 //El archivo debe existir
 {
-    boolean resultado = FALSE;
-    FILE * f = fopen(nomArch, "rb");
-    int entero;
+    boolean vResultado = FALSE;
+    FILE * f = fopen(pNomArch, "rb");
+    Expediente vExpediente;
 
-    fread(&entero, sizeof(int), 1, f);
+    fread(&vExpediente, sizeof(Expediente), 1, f);
     if(feof(f))
-       resultado = TRUE;
+       vResultado = TRUE;
 
     fclose(f);
 
-    return resultado;
+    return vResultado;
 }
 
-boolean Pertenece (String nomArch, int entero)
+boolean expedientePertenece (String pNomArch, Expediente pExpediente)
 {
-    boolean encontrado = FALSE;
-    int aux;
+    boolean vEncontrado = FALSE;
+    Expediente vAuxExpediente;
 
-    FILE * f = fopen (nomArch, "rb");
-    fread(&aux, sizeof(int), 1, f);
+    FILE * f = fopen (pNomArch, "rb");
+    fread(&vAuxExpediente, sizeof(Expediente), 1, f);
 
-    while(!feof(f) && !encontrado)
+    while(!feof(f) && !vEncontrado)
     {
-        if(aux==entero)
-            encontrado = TRUE;
+        if(vAuxExpediente.codigo==pExpediente.codigo)
+            vEncontrado = TRUE;
         else
         {
-            fread(&aux, sizeof(int), 1, f);
+            fread(&vAuxExpediente, sizeof(Expediente), 1, f);
         }
     }
     fclose(f);
-    return encontrado;
+    return vEncontrado;
 }
 
 
-/*int Largo (String nomArch)
+
+void agregarRevision(String pNomArch, Revision pRevision)
 {
-    int contador = 0;
-    int entero;
+    FILE * f = fopen(pNomArch, "ab");
+    fwrite(&pRevision, sizeof(Revision), 1, f);
+    fclose(f);
 
-    FILE * f = fopen(nomArch, "rb");
-    fread(&entero, sizeof(int), 1, f);
+}
 
-    while(!feof(f))
+boolean existeRevision(String pNomArch)
+{
+    boolean vResultado = FALSE;
+
+    FILE * f = fopen(pNomArch, "rb");
+
+    if(f==NULL)
+        vResultado =  FALSE;
+    else
+       {
+         vResultado =  TRUE;
+         fclose(f);
+       }
+
+    return vResultado;
+
+}
+
+boolean revisionVacio (String pNomArch)
+{
+    boolean vResultado = FALSE;
+    FILE * f = fopen(pNomArch, "rb");
+    Revision vRevision;
+
+    fread(&vRevision, sizeof(Revision), 1, f);
+    if(feof(f))
+       vResultado = TRUE;
+
+    fclose(f);
+
+    return vResultado;
+
+}
+
+boolean revisionPertenece (String pNomArch, Revision pRevision)
+{
+    boolean vEncontrado = FALSE;
+    Revision vAuxRevision;
+
+    FILE * f = fopen (pNomArch, "rb");
+    fread(&vAuxRevision, sizeof(Revision), 1, f);
+
+    while(!feof(f) && !vEncontrado)
     {
-        contador ++;
-        fread(&entero, sizeof(int), 1, f);
+        if(vAuxRevision.codigoExpediente==pRevision.codigoExpediente)
+            vEncontrado = TRUE;
+        else
+        {
+            fread(&vAuxRevision, sizeof(Revision), 1, f);
+        }
     }
-
     fclose(f);
-    return contador;
+    return vEncontrado;
 }
-
-
-int Largo (String nomArch)
-{
-    FILE * f = fopen(nomArch, "rb");
-    fseek(f, 0, SEEK_END);
-    long tam = ftell (f);
-
-
-    fclose(f);
-    return (tam/sizeof(int));
-}
-
-
-int Kesimo (String nomArch, int k)
-{
-    int entero;
-
-    FILE * f = fopen(nomArch, "rb");
-    fseek(f, (k-1)*sizeof(int), SEEK_SET);
-    fread(&entero, sizeof(int), 1, f);
-
-    fclose(f);
-
-    return entero;
-
-}
-*/

@@ -3,17 +3,25 @@
 #include "Arbol.h"
 #include "ListaRevision.h"
 
-void agregar(String nomArch, int entero);
+void agregarExpediente(String pNomArch, Expediente pExpediente);
 
-boolean existe(String nomArch);
+boolean existeExpediente(String pNomArch);
 
-boolean Vacio (String nomArch);
+boolean expedienteVacio (String pNomArch);
 
-boolean Pertenece (String nomArch, int entero);
+boolean expedientePertenece (String pNomArch, Expediente pExpediente);
 
-int Largo (String nomArch);
 
-int Kesimo (String nomArch, int k);
+void agregarRevision(String pNomArch, Revision pRevision);
+
+boolean existeRevision(String pNomArch);
+
+boolean revisionVacio (String pNomArch);
+
+boolean revisionPertenece (String pNomArch, Revision pRevision);
+
+
+
 
 
 #endif // ARCHIVO_H_INCLUDED

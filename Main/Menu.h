@@ -2,13 +2,14 @@
 #define MENU_H_INCLUDED
 #include "Boolean.h"
 
-void mostrarMenu();
+void mostrarMenu(int &pOpcion);
 
-void mostrarSubMenuListados(int opcion);
+void mostrarSubMenuListados(int &pOpcion);
 
-void mostrarSubMenuConsultas(int opcion);
-
+void mostrarSubMenuConsultas(int &pOpcion);
 
 boolean validarOpcionMenu(int opcion);
+
+boolean validarOpcionSubMenu(int opcion);
 
 #endif // MENU_H_INCLUDED

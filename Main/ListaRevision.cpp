@@ -31,7 +31,14 @@ void borrarRevision(Lista &l, long codigo)
 {
     while(l != NULL)
     {
-
+        if(darCodigoExpediente(l -> revisiones) == codigo)
+        {
+            Lista aux = l;
+            l = l -> sig;
+            delete aux;
+        }
+        else
+            l = l ->sig;
     }
 }
 //PRECONDICION: La revision debe existir
@@ -55,7 +62,8 @@ void listarRevisionsPorExpediente (Lista l, long codigo)
             mostrarRevision(l -> revisiones);
             encontre = TRUE;
         }
-        l = l -> sig;
+        else
+            l = l -> sig;
     }
 }
 
@@ -68,7 +76,8 @@ int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
         {
             cntRevisiones++;
         }
-        l = l -> sig;
+        else
+            l = l -> sig;
     }
     return cntRevisiones;
 }

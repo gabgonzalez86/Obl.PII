@@ -22,20 +22,37 @@ Expediente darRaiz(Arbol a);
 //PRECONDICION: El arbol no puede estar vacio
 
 //Devuelve el hijo izquierdo del arbol
-Expediente darHijoIzquierdo(Arbol a);
+Arbol darHijoIzquierdo(Arbol a);
 //PRECONDICION: El arbol no puede estar vacio
 
 //Devuelve el hijo derecho del arbol
-Expediente darHijoDerecho(Arbol a);
+Arbol darHijoDerecho(Arbol a);
 //PRECONDICION: El arbol no puede estar vacio
 
+// Guarda un nuevo Expediente
+void GuardarExpediente(Arbol &a, Expediente exp);
+//PRECONDICION: verificar que no exista el expediente
+
+//FALTA
 //Devuelve la cantidad de expedientes por apellido
 int cantidadExpedientesPorEscribano(Arbol a, String apellido);
+//FALTA
+
+
+//Devuelve el valor mínimo
+Expediente Minimo(Arbol a);
+//PRECONDICION: verificar que el arbol NO este vacío
+
+//Borra el valor mínimo
+void borrarMinimo(Arbol &a);
+//PRECONDICION: verificar que el arbol NO este vacío
 
 //Borra el exepediente del arbol
 void borrarExpediente(Arbol &a, Expediente exp);
 //PRECONDICION: El expediente debe existir
 
+
+//FALTA
 //Verifica si existe el expediente
 boolean existeExpediente(Arbol a, long codigo);
 
@@ -44,5 +61,6 @@ void mayorMenorExpediente(Arbol a);
 
 //Muestra los expedientes del arbol
 void listarExpedientes(Arbol a);
+//FALTA
 
 #endif // ARBOL_H_INCLUDED

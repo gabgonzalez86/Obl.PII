@@ -12,7 +12,8 @@ int main()
 
   int vOpcion;
   boolean vSalir = FALSE,
-          vSalirSubMenu = FALSE;
+          vSalirSubMenuListado = FALSE,
+          vSalirSubMenuConsulta = FALSE;
 
     do
     {
@@ -32,6 +33,8 @@ int main()
                     do
                     {
                         mostrarSubMenuListados(vOpcionSubMenuListado);
+                        vSalirSubMenuListado = FALSE;
+
                         switch(vOpcionSubMenuListado)
                         {
                             case 1: printf("\nSubMenu Listado 1.\n");
@@ -42,11 +45,11 @@ int main()
                             break;
                             case 4: printf("\nSubMenu Listado 4.\n");
                             break;
-                            case 5: vSalirSubMenu=TRUE;
+                            case 5: vSalirSubMenuListado=TRUE;
                             break;
                             default: printf("Opcion invalida.\n");
                         }
-                    }while(!vSalirSubMenu);
+                    }while(!vSalirSubMenuListado);
                     break;
 
 
@@ -55,7 +58,9 @@ int main()
                      do
                     {
                          mostrarSubMenuConsultas(vOpcionSubMenuConsultas);
-                        switch(vOpcionSubMenuConsultas)
+                         vSalirSubMenuConsulta = FALSE;
+
+                         switch(vOpcionSubMenuConsultas)
                         {
                             case 1: printf("\nSubMenu Consulta 1.\n");
                             break;
@@ -65,11 +70,12 @@ int main()
                             break;
                             case 4: printf("\nSubMenu Consulta 4.\n");
                             break;
-                            case 5: vSalirSubMenu=TRUE;
+                            case 5: vSalirSubMenuConsulta=TRUE;
                             break;
                             default: printf("Opcion invalida.\n");
                         }
-                    }while(!vSalirSubMenu);
+                    }while(!vSalirSubMenuConsulta);
+
                     break;
             break;
 

@@ -461,3 +461,73 @@
 	"string.h"
 	"boolean.h"
 
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\arbol.cpp
+	"Arbol.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\arbol.h
+	"Expediente.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\expediente.h
+	"String.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\string.h
+	"Boolean.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\boolean.h
+	<stdio.h>
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\archivo.cpp
+	"Archivo.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\archivo.h
+	"Arbol.h"
+	"ListaRevision.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\listarevision.h
+	"Revision.h"
+	"Expediente.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"string.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\fecha.h
+	"Boolean.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\resultado.h
+	<stdio.h>
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\expediente.cpp
+	"Expediente.h"
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\fecha.cpp
+	"Fecha.h"
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\listarevision.cpp
+	"ListaRevision.h"
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\menu.cpp
+	"Menu.h"
+
+1543530344 c:\users\java\desktop\obl.pii-master\main\menu.h
+	"Boolean.h"
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\resultado.cpp
+	"Resultado.h"
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\revision.cpp
+	"Revision.h"
+
+1543530344 source:c:\users\java\desktop\obl.pii-master\main\string.cpp
+	"string.h"
+	"boolean.h"
+
+1543576939 source:c:\users\java\desktop\obl.pii-master\main\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+

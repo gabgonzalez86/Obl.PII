@@ -3,7 +3,7 @@
 //Carga una fecha
 void cargarFecha(Fecha &fec)
 {
-   printf("\nIngrese la fecha de revision en el siguiente formato dd mm aaaa: ");
+   printf("Ingrese la fecha de revision en el siguiente formato dd mm aaaa: ");
    scanf("%d", &fec.dia);
    scanf("%d", &fec.mes);
    scanf("%d", &fec.anio);
@@ -20,7 +20,7 @@ void cargarFecha(Fecha &fec)
 //Muestra una fecha
 void mostrarFecha(Fecha fec)
 {
-    printf("La fecha ingresada es: %d %d %d", fec.dia, fec.mes, fec.anio);
+    printf("Fecha: %d %d %d", fec.dia, fec.mes, fec.anio);
 
 }
 

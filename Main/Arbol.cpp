@@ -45,6 +45,17 @@ void GuardarExpediente(Arbol &a, Expediente exp)
     }
 }
 
+void mostrarArbol(Arbol pArbolExpedientes)
+{
+    if(pArbolExpedientes!=NULL)
+    {
+        mostrarArbol(pArbolExpedientes->hizq);
+        mostrarExpediente(pArbolExpedientes->expedientes);
+        mostrarArbol(pArbolExpedientes->hder);
+    }
+
+}
+
 boolean existeExpediente(Arbol a, long codigo)
 {
     if(a == NULL)
@@ -73,6 +84,16 @@ Expediente Minimo(Arbol a)
      while (a->hizq != NULL)
      {
         a = a->hizq;
+     }
+
+     return (a->expedientes);
+}
+
+Expediente Maximo(Arbol a)
+{
+     while (a->hder != NULL)
+     {
+        a = a->hder;
      }
 
      return (a->expedientes);

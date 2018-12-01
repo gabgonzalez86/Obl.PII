@@ -1,45 +1,15 @@
 #include "Revision.h"
 
-/*
-void cargarRevision(Revision &rev)
-{
-    printf("\nINGRESE LOS DATOS DE LA REVISION");
-    cargarFecha(rev.fchRealizacion);
-
-    printf("\nMotivo: ");
-    strcrear(rev.motivo);
-    scan(rev.motivo);
-
-    printf("\nCodigo expediente: ");
-    //validar que exista codigo expediente
-    scanf("%ld", &rev.codigoExpediente);
-
-    printf("\nIngrese un resultado (1- Satisfacoria, 2-Incompleta, 3- Pendiente ): ");
-    int opcion;
-    scanf("%d",&opcion);
-
-    while(opcion >3 || opcion <1)
-    {
-        printf("Opcion incorrecta.\n");
-        scanf("%d",&opcion);
-    }
-
-    cargarResultado(opcion, rev.resultadoRevision);
-
-}
-*/
 void cargarRevision(Revision &rev, long codigoExp)
 {
     rev.codigoExpediente = codigoExp;
-
-    printf("\nINGRESE LOS DATOS DE LA REVISION");
     cargarFecha(rev.fchRealizacion);
 
-    printf("\nMotivo: ");
+    printf("Motivo: ");
     strcrear(rev.motivo);
     scan(rev.motivo);
 
-    printf("\nIngrese un resultado (1- Satisfacoria, 2-Incompleta, 3- Pendiente ): ");
+    printf("Ingrese un resultado (1- Satisfacoria, 2-Incompleta, 3- Pendiente ): ");
     int opcion;
     scanf("%d",&opcion);
 
@@ -56,11 +26,11 @@ void mostrarRevision(Revision rev)
 {
     printf("\nDatos de la revision:\n");
     mostrarFecha(rev.fchRealizacion);
-    printf("\nMotivo: ");
+    printf(" - Motivo: ");
     print(rev.motivo);
-    printf("\nCodigo expediente: ");
+    printf(" - Codigo expediente: ");
     printf("%ld", rev.codigoExpediente);
-    printf("\nResultado: ");
+    printf(" - Resultado: ");
     mostrarResultado(rev.resultadoRevision);
 }
 

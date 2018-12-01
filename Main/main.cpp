@@ -15,15 +15,45 @@ int main()
           vSalirSubMenuListado = FALSE,
           vSalirSubMenuConsulta = FALSE;
 
+  Expediente vExpediente;
+  Revision   vRevision;
+  Arbol vArbolExpedientes;
+  Lista vListaRevisiones;
+
+  crearArbol(vArbolExpedientes);
+
+
+  crearLista(vListaRevisiones);
+
     do
     {
         mostrarMenu(vOpcion);
         switch(vOpcion)
         {
-            case 1:printf("\nFuncion de la opcion 1\n.");
+            case 1: int vCodigoexpediente;
+
+                    printf("\nIngrese el codigo del expediente: ");
+                    scanf("%ld", &vCodigoexpediente);
+
+                    if(!existeExpediente(vArbolExpedientes, vCodigoexpediente))
+                        {
+                          cargarExpediente(vExpediente, vCodigoexpediente);
+                          GuardarExpediente(vArbolExpedientes, vExpediente);
+                        }
+                    else
+                        printf("No se puede realizar la carga, ya existe un expediente con ese codigo.\n");
             break;
 
-            case 2:printf("\nFuncion de la opcion 2\n.");
+            case 2: printf("\nIngrese el codigo del expediente asociado a la revision: ");
+                    scanf("%ld", &vCodigoexpediente);
+                    if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
+                        {
+                            cargarRevision(vRevision, vCodigoexpediente);
+                            agregarRevisionFront(vListaRevisiones, vRevision);
+
+                        }
+                    else
+                        printf("No existe expediente para asociar la revision.\n");
             break;
 
             case 3:printf("\nFuncion de la opcion 3\n.");
@@ -37,13 +67,24 @@ int main()
 
                         switch(vOpcionSubMenuListado)
                         {
-                            case 1: printf("\nSubMenu Listado 1.\n");
+                            case 1: mostrarArbol(vArbolExpedientes);
                             break;
-                            case 2: printf("\nSubMenu Listado 2.\n");
+                            case 2: listarRevisiones(vListaRevisiones);
                             break;
-                            case 3: printf("\nSubMenu Listado 3.\n");
+                            case 3: printf("\nExpediente con menor codigo:");
+                                    mostrarExpediente(Minimo(vArbolExpedientes));
+                                    printf("\nExpediente con mayor codigo:");
+                                    mostrarExpediente(Maximo(vArbolExpedientes));
                             break;
-                            case 4: printf("\nSubMenu Listado 4.\n");
+                            case 4: printf("\nIngrese el codigo del expediente: ");
+                                    scanf("%ld", &vCodigoexpediente);
+                                    if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
+                                    {
+                                        listarRevisionesPorExpediente(vListaRevisiones, vCodigoexpediente);
+
+                                    }
+                                    else
+                                        printf("No existe expediente para asociar la revision.\n");
                             break;
                             case 5: vSalirSubMenuListado=TRUE;
                             break;

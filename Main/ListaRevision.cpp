@@ -66,7 +66,7 @@ void listarRevisiones (Lista l)
     }
 }
 //asumo que ingresa un nro expediente valido? agregar sele
-void listarRevisionsPorExpediente (Lista l, long codigo)
+void listarRevisionesPorExpediente (Lista l, long codigo)
 {
     boolean encontre = FALSE;
     while(l != NULL && encontre)

@@ -33,6 +33,9 @@ Arbol darHijoDerecho(Arbol a);
 void GuardarExpediente(Arbol &a, Expediente exp);
 //PRECONDICION: verificar que no exista el expediente
 
+//Muestra los registros del arbol de expedientes en orden
+void mostrarArbol(Arbol pArbolExpedientes);
+
 //FALTA
 //Devuelve la cantidad de expedientes por apellido
 int cantidadExpedientesPorEscribano(Arbol a, String apellido);
@@ -41,6 +44,10 @@ int cantidadExpedientesPorEscribano(Arbol a, String apellido);
 
 //Devuelve el valor mínimo
 Expediente Minimo(Arbol a);
+//PRECONDICION: verificar que el arbol NO este vacío
+
+//Devuelve el valor maximo
+Expediente Maximo(Arbol a);
 //PRECONDICION: verificar que el arbol NO este vacío
 
 //Borra el valor mínimo

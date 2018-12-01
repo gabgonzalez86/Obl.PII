@@ -33,7 +33,7 @@ void borrarRevision(Lista &l, long codigo);
 void listarRevisiones (Lista l);
 
 //Muestra las revisiones para el expediente
-void listarRevisionsPorExpediente (Lista l, long codigo);
+void listarRevisionesPorExpediente (Lista l, long codigo);
 
 //Devuelvela cantidad de revisiones por fecha
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);

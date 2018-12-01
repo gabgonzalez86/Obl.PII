@@ -1,13 +1,5 @@
 #include "Archivo.h"
 
-void agregarExpediente(String pNomArch, Expediente pExpediente)
-{
-    FILE * f = fopen(pNomArch, "ab");
-    fwrite(&pExpediente, sizeof(Expediente), 1, f);
-    fclose(f);
-}
-
-
 boolean existeExpediente(String pNomArch)
 {
     boolean vResultado = FALSE;

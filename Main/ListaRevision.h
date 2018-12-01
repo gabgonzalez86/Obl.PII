@@ -37,4 +37,7 @@ int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);
 
 void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas, int &pPendientes);
 
+// Abre el archivo para escritura y agrega al archivo los datos de la lista
+void agregarListaAArchivo(Lista L, String pArchivo);
+
 #endif // LISTAREVISION_H_INCLUDED

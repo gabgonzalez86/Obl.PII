@@ -77,3 +77,15 @@ int strlar (String s)
         i++;
     return i;
 }
+
+void agregarStringAArchivo(String s, FILE * f)
+{
+    int i = 0;
+    while(s[i] != '\0')
+    {
+        fwrite(&s[i], sizeof(char), 1, f);
+        i++;
+    }
+
+    fwrite(&s[i], sizeof(char), 1, f);
+}

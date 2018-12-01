@@ -3,8 +3,6 @@
 #include "Arbol.h"
 #include "ListaRevision.h"
 
-void agregarExpediente(String pNomArch, Expediente pExpediente);
-
 boolean existeExpediente(String pNomArch);
 
 boolean expedienteVacio (String pNomArch);

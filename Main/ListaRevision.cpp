@@ -92,3 +92,14 @@ void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas,
         l = l -> sig;
     }
 }
+
+void agregarListaAArchivo(Lista L, String pArchivo)
+{
+    FILE * f = fopen(pArchivo, "wb");
+    while(L != NULL)
+    {
+        agregarRevAArchivo(L->revisiones, f);
+        L = L->sig;
+    }
+    fclose(f);
+}

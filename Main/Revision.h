@@ -43,5 +43,8 @@ long darCodigoExpediente(Revision rev);
 resultado darResultadoRevision(Revision rev);
 //PRECONDICION: La revision debe existir
 
+//agrega al archivo los datos de la Revision
+void agregarRevAArchivo(Revision rev, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para escritura.
 
 #endif // REVISION_H_INCLUDED

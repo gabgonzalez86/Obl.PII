@@ -38,5 +38,8 @@ void darCaratula(Expediente exp, String &pCaratula);
 int  darCantidadPaginas (Expediente exp);
 //PRECONDICION: El expediente debe existir
 
+//agrega al archivo los datos del Expediente
+void AgregarExpAArchivo(Expediente exp, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para escritura.
 
 #endif // EXPEDIENTE_H_INCLUDED

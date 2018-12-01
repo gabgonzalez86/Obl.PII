@@ -63,4 +63,12 @@ void mayorMenorExpediente(Arbol a);
 void listarExpedientes(Arbol a);
 //FALTA
 
+//agrega al archivo los datos del árbol
+void agregarArbolAuxArchivo(Arbol a, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para escritura
+
+// Abre el archivo para escritura y agrega al archivo los datos del árbol
+//llamando al procedimiento agregarArbolAuxArchivo
+void agregarArbolAArchivo(Arbol a, String pArchivo);
+
 #endif // ARBOL_H_INCLUDED

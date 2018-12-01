@@ -86,3 +86,11 @@ void darApellidoExpediente(Expediente exp, String &pApellido)
     strcop(pApellido, exp.apellido);
 }
 
+void AgregarExpAArchivo(Expediente exp, FILE * f)
+{
+    agregarStringAArchivo(exp.caratula, f);
+    agregarStringAArchivo(exp.nombre, f);
+    agregarStringAArchivo(exp.apellido, f);
+    fwrite(&exp.codigo, sizeof(long), 1, f);
+    fwrite(&exp.cantidadPaginas, sizeof(int), 1, f);
+}

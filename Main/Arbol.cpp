@@ -125,3 +125,20 @@ void borrarExpediente(Arbol &a, Expediente exp)
             borrarExpediente(a->hder, exp);
     }
 }
+
+void agregarArbolAuxArchivo(Arbol a, FILE * f)
+{
+    if(a != NULL)
+    {
+        fwrite (&(a->expedientes), sizeof (int), 1, f);
+        agregarArbolAuxArchivo(a-> hizq, f);
+        agregarArbolAuxArchivo(a-> hder, f);
+    }
+}
+
+void agregarArbolAArchivo(Arbol a, String pArchivo)
+{
+    FILE * f = fopen(pArchivo, "wb");
+    agregarArbolAuxArchivo(a, f);
+    fclose (f);
+}

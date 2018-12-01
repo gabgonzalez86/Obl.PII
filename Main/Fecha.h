@@ -31,4 +31,8 @@ Fecha darFecha(Fecha fec);
 //Devuelve si la primer fecha es mayor a la segunda
 boolean esMayor(Fecha fec1, Fecha fec2);
 
+//agrega al archivo los datos de la Fecha
+void agregarFechaAArchivo(Fecha pfecha, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para escritura.
+
 #endif // FECHA_H_INCLUDED

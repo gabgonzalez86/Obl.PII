@@ -121,3 +121,9 @@ boolean esMayor(Fecha fec1, Fecha fec2)
 
 }
 
+void agregarFechaAArchivo(Fecha pfecha, FILE * f)
+{
+    fwrite(&pfecha.dia, sizeof(int), 1, f);
+    fwrite(&pfecha.mes, sizeof(int), 1, f);
+    fwrite(&pfecha.anio, sizeof(int), 1, f);
+}

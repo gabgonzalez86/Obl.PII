@@ -102,4 +102,11 @@ resultado darResultadoRevision(Revision rev)
     return rev.resultadoRevision;
 }
 
+void agregarRevAArchivo(Revision rev, FILE * f)
+{
+    agregarStringAArchivo(rev.motivo, f);
+    agregarFechaAArchivo(rev.fchRealizacion, f);
+    fwrite(&rev.codigoExpediente, sizeof(long), 1, f);
+    fwrite(&rev.resultadoRevision, sizeof(resultado), 1, f);
+}
 

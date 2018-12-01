@@ -25,8 +25,12 @@ void strcop (String &s1,String s2);
 
 int strlar (String s);
 
-// agrega los caracteres del string en el archivo
+//agrega los caracteres del string en el archivo
 void agregarStringAArchivo(String s, FILE * f);
 //PRECONDICION: El archivo debe estar abierto para escritura.
+
+//lee desde el archivo los caracteres del string
+void leerStringDeArchivo (String &s, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para lectura
 
 #endif // STRING_H_INCLUDED

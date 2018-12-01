@@ -142,3 +142,18 @@ void agregarArbolAArchivo(Arbol a, String pArchivo)
     agregarArbolAuxArchivo(a, f);
     fclose (f);
 }
+
+void leerArbolDeArchivo(Arbol &a, String pArchivo)
+{
+    FILE * f = fopen(pArchivo, "rb");
+    Expediente vExp;
+
+    leerExpDeArchivo(vExp, f);
+
+    while(!feof(f))
+    {
+        GuardarExpediente(a, vExp);
+        fread(&vExp, sizeof (int), 1, f);
+    }
+    fclose (f);
+}

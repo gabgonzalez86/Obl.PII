@@ -19,12 +19,33 @@ Revision primerElementoListado(Lista l)
     return l -> revisiones;
 }//PRECONDICION: La lista no puede estar vacia
 
-void agregarRevision(Lista &l, Revision rev)
+void agregarRevisionFront(Lista &l, Revision rev)
 {
     Lista aux = new nodoLista;
     aux -> revisiones = rev;
     aux -> sig = l;
     l = aux;
+}
+
+void agregarRevisionBack(Lista &l, Revision rev)
+{
+    Lista vLista = new nodoLista;
+    vLista ->revisiones = rev;
+    vLista -> sig = NULL;
+
+    if(l == NULL)
+    {
+        l = vLista;
+    }
+    else
+    {
+        Lista aux = l;
+        while (aux -> sig != NULL)
+        {
+            aux = aux -> sig;
+        }
+        aux -> sig = vLista;
+    }
 }
 
 void borrarRevision(Lista &l, long codigo)
@@ -102,4 +123,19 @@ void agregarListaAArchivo(Lista L, String pArchivo)
         L = L->sig;
     }
     fclose(f);
+}
+
+void leerListaDeArchivo(Lista &L, String pArchivo)
+{
+    FILE * f = fopen (pArchivo, "rb");
+    Revision rev;
+
+    leerRevDeArchivo(rev, f);
+
+    while(!feof(f))
+    {
+        agregarRevisionBack(L, rev);
+        leerRevDeArchivo(rev, f);
+    }
+    fclose (f);
 }

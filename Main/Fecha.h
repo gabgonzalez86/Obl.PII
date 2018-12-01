@@ -32,7 +32,11 @@ Fecha darFecha(Fecha fec);
 boolean esMayor(Fecha fec1, Fecha fec2);
 
 //agrega al archivo los datos de la Fecha
-void agregarFechaAArchivo(Fecha pfecha, FILE * f);
+void agregarFechaAArchivo(Fecha pFecha, FILE * f);
 //PRECONDICION: El archivo debe estar abierto para escritura.
+
+//lee desde el archivo los datos de la Fecha
+void leerFechaDeArchivo(Fecha &pFecha, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para lectura
 
 #endif // FECHA_H_INCLUDED

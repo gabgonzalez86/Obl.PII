@@ -19,8 +19,11 @@ boolean listaVacia(Lista l);
 Revision primerElementoListado(Lista l);
 //PRECONDICION: La lista no puede estar vacia
 
-//Agrega una revision al listado
-void agregarRevision(Lista &l, Revision rev);
+//Agrega una revision al Principio listado
+void agregarRevisionFront(Lista &l, Revision rev);
+
+//Agrega una revision al Final listado
+void agregarRevisionBack(Lista &l, Revision rev);
 
 //Borra una revision en el listado
 void borrarRevision(Lista &l, long codigo);
@@ -39,5 +42,10 @@ void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas,
 
 // Abre el archivo para escritura y agrega al archivo los datos de la lista
 void agregarListaAArchivo(Lista L, String pArchivo);
+
+//Abre el archivo para lectura y agrega en la lista los datos de las revisiones,
+//llamando al procedimiento agregarRevisionBack
+void leerListaDeArchivo(Lista &L, String pArchivo);
+//PRECONDICION: validar que exista el archivo
 
 #endif // LISTAREVISION_H_INCLUDED

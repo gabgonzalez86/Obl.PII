@@ -71,4 +71,9 @@ void agregarArbolAuxArchivo(Arbol a, FILE * f);
 //llamando al procedimiento agregarArbolAuxArchivo
 void agregarArbolAArchivo(Arbol a, String pArchivo);
 
+//Abre el archivo para lectura y agrega al árbol los Expedientes
+//llamando al procedimiento GuardarExpediente
+void leerArbolDeArchivo(Arbol &a, String pArchivo);
+//PRECONDICION: validar que exista el archivo
+
 #endif // ARBOL_H_INCLUDED

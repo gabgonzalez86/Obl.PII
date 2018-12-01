@@ -42,4 +42,8 @@ int  darCantidadPaginas (Expediente exp);
 void AgregarExpAArchivo(Expediente exp, FILE * f);
 //PRECONDICION: El archivo debe estar abierto para escritura.
 
+//lee desde el archivo los datos del Expediente
+void leerExpDeArchivo(Expediente &exp, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para lectura
+
 #endif // EXPEDIENTE_H_INCLUDED

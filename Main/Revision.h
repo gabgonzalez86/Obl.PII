@@ -47,4 +47,8 @@ resultado darResultadoRevision(Revision rev);
 void agregarRevAArchivo(Revision rev, FILE * f);
 //PRECONDICION: El archivo debe estar abierto para escritura.
 
+//lee desde el archivo los datos de la Revision
+void leerRevDeArchivo(Revision &rev, FILE * f);
+//PRECONDICION: El archivo debe estar abierto para lectura
+
 #endif // REVISION_H_INCLUDED

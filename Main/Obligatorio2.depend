@@ -531,25 +531,25 @@
 	"Revision.h"
 	"Archivo.h"
 
-1543622342 source:c:\users\heber\desktop\obl.pii-master\main\fecha.cpp
+1543626821 source:c:\users\heber\desktop\obl.pii-master\main\fecha.cpp
 	"Fecha.h"
 
-1543621020 c:\users\heber\desktop\obl.pii-master\main\fecha.h
+1543626821 c:\users\heber\desktop\obl.pii-master\main\fecha.h
 	"Boolean.h"
 
 1543564812 c:\users\heber\desktop\obl.pii-master\main\boolean.h
 	<stdio.h>
 
-1543619189 source:c:\users\heber\desktop\obl.pii-master\main\arbol.cpp
+1543628328 source:c:\users\heber\desktop\obl.pii-master\main\arbol.cpp
 	"Arbol.h"
 
-1543619189 c:\users\heber\desktop\obl.pii-master\main\arbol.h
+1543628494 c:\users\heber\desktop\obl.pii-master\main\arbol.h
 	"Expediente.h"
 
-1543618226 c:\users\heber\desktop\obl.pii-master\main\expediente.h
+1543627907 c:\users\heber\desktop\obl.pii-master\main\expediente.h
 	"String.h"
 
-1543618137 c:\users\heber\desktop\obl.pii-master\main\string.h
+1543626838 c:\users\heber\desktop\obl.pii-master\main\string.h
 	"Boolean.h"
 
 1543618454 source:c:\users\heber\desktop\obl.pii-master\main\archivo.cpp
@@ -559,11 +559,11 @@
 	"Arbol.h"
 	"ListaRevision.h"
 
-1543622909 c:\users\heber\desktop\obl.pii-master\main\listarevision.h
+1543628485 c:\users\heber\desktop\obl.pii-master\main\listarevision.h
 	"Revision.h"
 	"Expediente.h"
 
-1543621020 c:\users\heber\desktop\obl.pii-master\main\revision.h
+1543626821 c:\users\heber\desktop\obl.pii-master\main\revision.h
 	"Fecha.h"
 	"Resultado.h"
 	"string.h"
@@ -571,10 +571,10 @@
 1543564812 c:\users\heber\desktop\obl.pii-master\main\resultado.h
 	<stdio.h>
 
-1543622393 source:c:\users\heber\desktop\obl.pii-master\main\expediente.cpp
+1543627898 source:c:\users\heber\desktop\obl.pii-master\main\expediente.cpp
 	"Expediente.h"
 
-1543564812 source:c:\users\heber\desktop\obl.pii-master\main\listarevision.cpp
+1543627563 source:c:\users\heber\desktop\obl.pii-master\main\listarevision.cpp
 	"ListaRevision.h"
 
 1543564812 source:c:\users\heber\desktop\obl.pii-master\main\main.cpp
@@ -594,10 +594,10 @@
 1543564812 source:c:\users\heber\desktop\obl.pii-master\main\resultado.cpp
 	"Resultado.h"
 
-1543622342 source:c:\users\heber\desktop\obl.pii-master\main\revision.cpp
+1543626892 source:c:\users\heber\desktop\obl.pii-master\main\revision.cpp
 	"Revision.h"
 
-1543617780 source:c:\users\heber\desktop\obl.pii-master\main\string.cpp
+1543626821 source:c:\users\heber\desktop\obl.pii-master\main\string.cpp
 	"string.h"
 	"boolean.h"
 

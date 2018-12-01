@@ -110,3 +110,11 @@ void agregarRevAArchivo(Revision rev, FILE * f)
     fwrite(&rev.resultadoRevision, sizeof(resultado), 1, f);
 }
 
+void leerRevDeArchivo(Revision &rev, FILE * f)
+{
+    strcrear(rev.motivo);
+    leerStringDeArchivo(rev.motivo, f);
+    leerFechaDeArchivo(rev.fchRealizacion, f);
+    fread(&rev.codigoExpediente, sizeof(long), 1, f);
+    fread(&rev.resultadoRevision, sizeof(resultado), 1, f);
+}

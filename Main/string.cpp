@@ -89,3 +89,18 @@ void agregarStringAArchivo(String s, FILE * f)
 
     fwrite(&s[i], sizeof(char), 1, f);
 }
+
+void leerStringDeArchivo (String &s, FILE * f)
+{
+    int i=0;
+    String aux;
+    aux = new char[MAX];
+    fread(&aux[i], sizeof(char), 1, f);
+    while(!feof(f) && (aux[i] != '\0'))
+    {
+        i++;
+        fread(&aux[i], sizeof(char), 1, f);
+    }
+    strcop (s, aux);
+    delete [] aux;
+}

@@ -53,6 +53,7 @@ int main()
             if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
             {
                 Fecha vFchRevision;
+                printf("Ingrese la fecha de revision en el siguiente formato dd mm aaaa: ");
                 cargarFecha(vFchRevision);
 
                 cargarRevision(vRevision, vCodigoexpediente, vFchRevision);
@@ -144,11 +145,34 @@ int main()
                     printf("\nSubMenu Consulta 2.\n");
                     break;
                 case 3:
-                    printf("\nSubMenu Consulta 3.\n");
-                    break;
+                    Fecha vFechaDesde,
+                          vFechaHasta;
+
+
+                    printf("\nIngrese la fecha desde (dd mm aaaa): ");
+                    cargarFecha(vFechaDesde);
+
+                    printf("\nIngrese la fecha hasta (dd mm aaaa): ");
+                    cargarFecha(vFechaHasta);
+                    if(esMayor(vFechaHasta, vFechaDesde))
+                    {
+                        printf("Se realizaron %d revisiones durante ese periodo.\n", cantidadRevisionesPorFecha(vListaRevisiones, vFechaDesde, vFechaHasta));
+                    }
+                    else
+                       printf("\nLa fecha hasta ingresada debe ser mayor a la fecha desde.\n") ;
+                break;
                 case 4:
-                    printf("\nSubMenu Consulta 4.\n");
-                    break;
+                {
+                        int vCntSatisfactorias = 0,
+                        vCntIncompletas    = 0,
+                        vCntPendientes     = 0;
+
+                        cantidadRevisionesPorTipo(vListaRevisiones, vCntSatisfactorias, vCntIncompletas, vCntPendientes);
+                        printf("\nTotal de revisiones satisfactorias: %d", vCntSatisfactorias);
+                        printf("\nTotal de revisiones incompletas: %d", vCntIncompletas);
+                        printf("\nTotal de revisiones pendientes: %d\n", vCntPendientes);
+                  }
+                break;
                 case 5:
                     vSalirSubMenuConsulta=TRUE;
                     break;

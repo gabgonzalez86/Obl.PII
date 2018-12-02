@@ -4,7 +4,7 @@ void mostrarMenu(int &pOpcion)
 {
     printf("\n**Opciones**\n");
     printf("\n1 - Carga de expediente.");
-    printf("\n2 - Registrar Revision.");
+    printf("\n2 - Registrar revision.");
     printf("\n3 - Borrar expediente.");
     printf("\n4 - Listados.");
     printf("\n5 - Consultas.");

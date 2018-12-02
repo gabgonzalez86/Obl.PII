@@ -3,7 +3,6 @@
 //Carga una fecha
 void cargarFecha(Fecha &fec)
 {
-   printf("Ingrese la fecha de revision en el siguiente formato dd mm aaaa: ");
    scanf("%d", &fec.dia);
    scanf("%d", &fec.mes);
    scanf("%d", &fec.anio);

@@ -35,6 +35,8 @@ void listarRevisiones (Lista l);
 //Muestra las revisiones para el expediente
 void listarRevisionesPorExpediente (Lista l, long codigo);
 
+int cantidadRevPorExp(Lista l, long pCodigo);
+
 //Devuelvela cantidad de revisiones por fecha
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);
 

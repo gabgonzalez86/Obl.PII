@@ -75,9 +75,8 @@ boolean existeExpediente(Arbol a, long codigo)
 int cantidadExpedientesPorEscribano(Arbol a, String pApellido)
 {
     String vApellido;
-    darApellidoExpediente(a->expedientes, vApellido);
 
-     if(a == NULL)
+    if(a == NULL)
         return 0;
     else
     {
@@ -194,6 +193,25 @@ void borrarExpedientePorCodigo(Arbol &a, long pCodigo)
             borrarExpedientePorCodigo(a->hizq, pCodigo);
         else
             borrarExpedientePorCodigo(a->hder, pCodigo);
+    }
+}
+
+void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad)
+{
+    int vCantidadAux = 0;
+    long vCodigoAux;
+
+    if(pArbolExpedientes!=NULL)
+    {
+        masRevProExp(pArbolExpedientes->hizq, pListaRevisiones, pCodigo, pCantidad);
+        vCodigoAux = darCodigo(pArbolExpedientes->expedientes);
+        vCantidadAux = cantidadRevPorExp(pListaRevisiones, vCodigoAux);
+        if(vCantidadAux > pCantidad)
+        {
+            pCantidad = vCantidadAux;
+            pCodigo = vCodigoAux;
+        }
+        masRevProExp(pArbolExpedientes->hder, pListaRevisiones, pCodigo, pCantidad);
     }
 }
 

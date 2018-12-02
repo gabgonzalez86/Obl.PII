@@ -87,6 +87,20 @@ void listarRevisionesPorExpediente (Lista l, long codigo)
     }
 }
 
+int cantidadRevPorExp(Lista l, long pCodigo)
+{
+    int cntRevisiones = 0;
+    while(l != NULL)
+    {
+        if(darCodigoExpediente(l->revisiones) == pCodigo)
+        {
+            cntRevisiones++;
+        }
+        l = l -> sig;
+    }
+    return cntRevisiones;
+}
+
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
 {
     int cntRevisiones = 0;

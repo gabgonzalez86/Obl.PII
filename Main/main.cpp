@@ -91,16 +91,27 @@ int main()
                 switch(vOpcionSubMenuListado)
                 {
                 case 1:
-                    mostrarArbol(vArbolExpedientes);
+                    if(!arbolVacio(vArbolExpedientes))
+                        mostrarArbol(vArbolExpedientes);
+                    else
+                        printf("\nNo hay Expedientes ingresados\n");
                     break;
                 case 2:
-                    listarRevisiones(vListaRevisiones);
+                    if(!listaVacia(vListaRevisiones))
+                        listarRevisiones(vListaRevisiones);
+                    else
+                        printf("\nNo hay Revisiones ingresadas\n");
                     break;
                 case 3:
-                    printf("\nExpediente con menor codigo:");
-                    mostrarExpediente(Minimo(vArbolExpedientes));
-                    printf("\nExpediente con mayor codigo:");
-                    mostrarExpediente(Maximo(vArbolExpedientes));
+                    if(!arbolVacio(vArbolExpedientes))
+                    {
+                        printf("\nExpediente con menor codigo:");
+                        mostrarExpediente(Minimo(vArbolExpedientes));
+                        printf("\nExpediente con mayor codigo:");
+                        mostrarExpediente(Maximo(vArbolExpedientes));
+                    }
+                    else
+                        printf("\nNo hay Expedientes ingresados\n");
                     break;
                 case 4:
                     printf("\nIngrese el codigo del expediente: ");
@@ -108,10 +119,9 @@ int main()
                     if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
                     {
                         listarRevisionesPorExpediente(vListaRevisiones, vCodigoexpediente);
-
                     }
                     else
-                        printf("No existe expediente para asociar la revision.\n");
+                        printf("No existe Expediente con el codigo ingresado.\n");
                     break;
                 case 5:
                     vSalirSubMenuListado=TRUE;
@@ -136,16 +146,31 @@ int main()
                 {
                 case 1:
                 {
-                    String vApellido;
-                    printf("\nIngrese un apellido: ");
-                    scan(vApellido);
-                    int cntExpedientesPorApellido = cantidadExpedientesPorEscribano(vArbolExpedientes,vApellido);
-                    printf("\nCantidad de expedientes : %d \n",cntExpedientesPorApellido);
+                    if(!arbolVacio(vArbolExpedientes))
+                    {
+                        String vApellido;
+                        printf("\nIngrese un apellido: ");
+                        scan(vApellido);
+                        int cntExpedientesPorApellido = cantidadExpedientesPorEscribano(vArbolExpedientes,vApellido);
+                        printf("\nCantidad de expedientes : %d \n",cntExpedientesPorApellido);
+                    }
+                    else
+                        printf("\nNo hay Expedientes ingresados\n");
                 }
 
                 break;
                 case 2:
-                    printf("\nSubMenu Consulta 2.\n");
+                    {
+                        if(!arbolVacio(vArbolExpedientes))
+                        {
+                            long vCodigo = -1;
+                            int vCantidad = -1;
+                            masRevProExp(vArbolExpedientes, vListaRevisiones, vCodigo, vCantidad);
+                            printf("\nEl Expediente con mas revisiones es el %ld y tiene una cantidad de %d Revisiones. \n ", vCodigo, vCantidad);
+                        }
+                    else
+                        printf("\nNo hay Expedientes ingresados\n");
+                    }
                     break;
                 case 3:
                     Fecha vFechaDesde,

@@ -20,7 +20,7 @@ void mostrarSubMenuListados(int &pOpcion)
 {
         printf("\n1 - Listar todos los expedientes del sistema.");
         printf("\n2 - Listar todas las revisiones del sistema.");
-        printf("\n3 - Listar datos del mayor y menos expediente.");
+        printf("\n3 - Listar datos del mayor y menor expediente.");
         printf("\n4 - Listar revisiones por codigo de expediente.");
         printf("\n5 - Volver.");
         printf("\nOpcion: ");

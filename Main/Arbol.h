@@ -1,6 +1,7 @@
 #ifndef ARBOL_H_INCLUDED
 #define ARBOL_H_INCLUDED
 #include "Expediente.h"
+#include "ListaRevision.h"
 
 
 typedef struct nodoA {Expediente expedientes;
@@ -39,6 +40,9 @@ void mostrarArbol(Arbol pArbolExpedientes);
 //FALTA
 //Devuelve la cantidad de expedientes por apellido
 int cantidadExpedientesPorEscribano(Arbol a, String pApellido);
+
+
+void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad);
 
 //Devuelve el valor mínimo
 Expediente Minimo(Arbol a);

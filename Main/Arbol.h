@@ -37,10 +37,10 @@ void GuardarExpediente(Arbol &a, Expediente exp);
 //Muestra los registros del arbol de expedientes en orden
 void mostrarArbol(Arbol pArbolExpedientes);
 
+
 //FALTA
 //Devuelve la cantidad de expedientes por apellido
 int cantidadExpedientesPorEscribano(Arbol a, String pApellido);
-
 
 void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad);
 

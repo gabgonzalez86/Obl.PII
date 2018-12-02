@@ -54,6 +54,8 @@ void mostrarArbol(Arbol pArbolExpedientes)
 
 }
 
+
+
 boolean existeExpediente(Arbol a, long codigo)
 {
     if(a == NULL)
@@ -200,8 +202,7 @@ void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo
 {
     int vCantidadAux = 0;
     long vCodigoAux;
-
-    if(pArbolExpedientes!=NULL)
+     if(pArbolExpedientes!=NULL)
     {
         masRevProExp(pArbolExpedientes->hizq, pListaRevisiones, pCodigo, pCantidad);
         vCodigoAux = darCodigo(pArbolExpedientes->expedientes);
@@ -214,6 +215,7 @@ void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo
         masRevProExp(pArbolExpedientes->hder, pListaRevisiones, pCodigo, pCantidad);
     }
 }
+
 
 void agregarArbolAuxArchivo(Arbol a, FILE * f)
 {

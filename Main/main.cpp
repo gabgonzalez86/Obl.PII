@@ -91,13 +91,13 @@ int main()
                 switch(vOpcionSubMenuListado)
                 {
                 case 1:
-                    if(!arbolVacio(vArbolExpedientes))
+                     if(!arbolVacio(vArbolExpedientes))
                         mostrarArbol(vArbolExpedientes);
                     else
                         printf("\nNo hay Expedientes ingresados\n");
                     break;
                 case 2:
-                    if(!listaVacia(vListaRevisiones))
+                     if(!listaVacia(vListaRevisiones))
                         listarRevisiones(vListaRevisiones);
                     else
                         printf("\nNo hay Revisiones ingresadas\n");
@@ -119,9 +119,10 @@ int main()
                     if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
                     {
                         listarRevisionesPorExpediente(vListaRevisiones, vCodigoexpediente);
+
                     }
                     else
-                        printf("No existe Expediente con el codigo ingresado.\n");
+                        printf("\nNo existe Expediente con el codigo ingresado.\n");
                     break;
                 case 5:
                     vSalirSubMenuListado=TRUE;
@@ -157,10 +158,9 @@ int main()
                     else
                         printf("\nNo hay Expedientes ingresados\n");
                 }
-
                 break;
                 case 2:
-                    {
+                   {
                         if(!arbolVacio(vArbolExpedientes))
                         {
                             long vCodigo = -1;
@@ -171,7 +171,6 @@ int main()
                     else
                         printf("\nNo hay Expedientes ingresados\n");
                     }
-                    break;
                 case 3:
                     Fecha vFechaDesde,
                           vFechaHasta;
@@ -222,43 +221,5 @@ int main()
 
     }
     while(!vSalir);
-
-
-
-    /*   Aplicacion para probar modulo fecha
-        Fecha fec1,
-              fec2;
-
-        cargarFecha(fec1);
-        mostrarFecha(fec1);
-        cargarFecha(fec2);
-
-        if(esMayor(fec1, fec2))
-            print("\nLa fecha 1 es mayor");
-        else
-            printf("\nLa fecha 2 es mayor.");
-
-    */
-//Prueba expediente
-    /*Expediente vExp;
-    cargarExpediente(vExp);
-    mostrarExpediente(vExp);*/
-//
-
-//Prueba expediente
-    /*Revision vRev;
-    cargarRevision(vRev);
-    mostrarRevision(vRev);*/
-
-//Prueba de listado revision
-
-
-//Prueba expediente HEBERT
-    /*long codigo = 12345;
-    Revision vRev;
-    cargarRevision(vRev, codigo);
-    mostrarRevision(vRev);*/
-
-
 
 }

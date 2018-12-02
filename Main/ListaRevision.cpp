@@ -101,6 +101,7 @@ int cantidadRevPorExp(Lista l, long pCodigo)
     return cntRevisiones;
 }
 
+
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
 {
     int cntRevisiones = 0;
@@ -134,6 +135,9 @@ void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas,
         l = l -> sig;
     }
 }
+
+
+
 
 void agregarListaAArchivo(Lista L, String pArchivo)
 {

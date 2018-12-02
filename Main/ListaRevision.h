@@ -42,6 +42,8 @@ int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);
 
 void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas, int &pPendientes);
 
+int mayorCantidadRevisiones(Lista vListaRevisiones);
+
 // Abre el archivo para escritura y agrega al archivo los datos de la lista
 void agregarListaAArchivo(Lista L, String pArchivo);
 

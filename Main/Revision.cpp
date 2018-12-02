@@ -1,9 +1,9 @@
 #include "Revision.h"
 
-void cargarRevision(Revision &rev, long codigoExp)
+void cargarRevision(Revision &rev, long codigoExp, Fecha fechaRev)
 {
     rev.codigoExpediente = codigoExp;
-    cargarFecha(rev.fchRealizacion);
+    rev.fchRealizacion = fechaRev;
 
     printf("Motivo: ");
     strcrear(rev.motivo);

@@ -1,7 +1,5 @@
 #include "Arbol.h"
 
-
-
 void crearArbol(Arbol &a)
 {
     a = NULL;
@@ -74,10 +72,22 @@ boolean existeExpediente(Arbol a, long codigo)
     }
 }
 
-/*int cantidadExpedientesPorEscribano(Arbol a, String apellido)
+int cantidadExpedientesPorEscribano(Arbol a, String pApellido)
 {
+    String vApellido;
+    darApellidoExpediente(a->expedientes, vApellido);
 
-}*/
+     if(a == NULL)
+        return 0;
+    else
+    {
+        darApellidoExpediente(a->expedientes, vApellido);
+        if(streq(pApellido, vApellido))
+            return 1 + cantidadExpedientesPorEscribano (a -> hizq, pApellido) + cantidadExpedientesPorEscribano (a -> hder, pApellido);
+        else
+            return cantidadExpedientesPorEscribano (a -> hizq, pApellido) + cantidadExpedientesPorEscribano (a -> hder, pApellido);
+    }
+}
 
 Expediente Minimo(Arbol a)
 {
@@ -107,6 +117,7 @@ void borrarMinimo(Arbol &a)
         aux = a->hder;
         delete a;
         a = aux;
+
     }
     else
         borrarMinimo(a->hizq);
@@ -122,6 +133,7 @@ void borrarExpediente(Arbol &a, Expediente exp)
             aux = a->hizq;
             delete a;
             a = aux;
+
         }
         else
         {
@@ -130,6 +142,8 @@ void borrarExpediente(Arbol &a, Expediente exp)
                 aux = a->hder;
                 delete a;
                 a = aux;
+
+
             }
             else
             {
@@ -144,6 +158,42 @@ void borrarExpediente(Arbol &a, Expediente exp)
             borrarExpediente(a->hizq, exp);
         else
             borrarExpediente(a->hder, exp);
+    }
+}
+
+void borrarExpedientePorCodigo(Arbol &a, long pCodigo)
+{
+    Arbol aux;
+    if(pCodigo == darCodigo(a->expedientes))
+    {
+        if(a->hder == NULL)
+        {
+            aux = a->hizq;
+            delete a;
+            a = aux;
+        }
+        else
+        {
+            if(a->hizq == NULL)
+            {
+                aux = a->hder;
+                delete a;
+                a = aux;
+
+            }
+            else
+            {
+                a->expedientes = Minimo(a->hder);
+                borrarMinimo(a->hder);
+            }
+        }
+    }
+    else
+    {
+        if(pCodigo < darCodigo(a->expedientes))
+            borrarExpedientePorCodigo(a->hizq, pCodigo);
+        else
+            borrarExpedientePorCodigo(a->hder, pCodigo);
     }
 }
 

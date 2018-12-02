@@ -32,7 +32,7 @@ void agregarRevisionBack(Lista &l, Revision rev)
     Lista vLista = new nodoLista;
     vLista ->revisiones = rev;
     vLista -> sig = NULL;
-
+    //se puede usar la funcion vacia
     if(l == NULL)
     {
         l = vLista;
@@ -52,7 +52,12 @@ void borrarRevision(Lista &l, long codigo)
 {
     while(l != NULL)
     {
-
+        if(codigo == darCodigoExpediente(l -> revisiones))
+        {
+            Lista aux = l;
+            l = l->sig;
+            delete aux;
+        }
     }
 }
 //PRECONDICION: La revision debe existir
@@ -68,13 +73,11 @@ void listarRevisiones (Lista l)
 //asumo que ingresa un nro expediente valido? agregar sele
 void listarRevisionesPorExpediente (Lista l, long codigo)
 {
-    boolean encontre = FALSE;
-    while(l != NULL && encontre)
+    while(l != NULL )
     {
         if( darCodigoExpediente(l -> revisiones) == codigo)
         {
             mostrarRevision(l -> revisiones);
-            encontre = TRUE;
         }
         l = l -> sig;
     }

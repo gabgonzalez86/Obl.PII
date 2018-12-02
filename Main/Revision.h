@@ -16,7 +16,7 @@ typedef struct {Fecha fchRealizacion;
 //void cargarRevision(Revision &rev);
 //PRECONDICION: se debe validar que exista el codigo de Expediente
 
-void cargarRevision(Revision &rev, long codigoExp);
+void cargarRevision(Revision &rev, long codigoExp, Fecha fechaRev);
 //PRECONDICION: se debe validar que exista el código de Expediente
 
 //Muestra la revision

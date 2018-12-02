@@ -38,9 +38,7 @@ void mostrarArbol(Arbol pArbolExpedientes);
 
 //FALTA
 //Devuelve la cantidad de expedientes por apellido
-int cantidadExpedientesPorEscribano(Arbol a, String apellido);
-//FALTA
-
+int cantidadExpedientesPorEscribano(Arbol a, String pApellido);
 
 //Devuelve el valor mínimo
 Expediente Minimo(Arbol a);
@@ -58,6 +56,7 @@ void borrarMinimo(Arbol &a);
 void borrarExpediente(Arbol &a, Expediente exp);
 //PRECONDICION: El expediente debe existir
 
+void borrarExpedientePorCodigo(Arbol &a, long pCodigo);
 
 //FALTA
 //Verifica si existe el expediente

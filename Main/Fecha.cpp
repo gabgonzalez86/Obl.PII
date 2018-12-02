@@ -9,7 +9,7 @@ void cargarFecha(Fecha &fec)
    scanf("%d", &fec.anio);
 
 //agregar while
-   if(!validarFecha(fec))
+   while(!validarFecha(fec))
    {
         printf("\nFecha ingresada incorrecta.");
         cargarFecha(fec);

@@ -601,3 +601,73 @@
 	"string.h"
 	"boolean.h"
 
+1543708919 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Revision.h"
+	"Archivo.h"
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\menu.h
+	"Boolean.h"
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\boolean.h
+	<stdio.h>
+
+1543712521 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\arbol.h
+	"Expediente.h"
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\expediente.h
+	"String.h"
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\string.h
+	"Boolean.h"
+
+1543699237 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"string.h"
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\fecha.h
+	"Boolean.h"
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\resultado.h
+	<stdio.h>
+
+1543628667 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\archivo.h
+	"Arbol.h"
+	"ListaRevision.h"
+
+1543691516 c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\listarevision.h
+	"Revision.h"
+	"Expediente.h"
+
+1543712401 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\arbol.cpp
+	"Arbol.h"
+
+1543628667 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\archivo.cpp
+	"Archivo.h"
+
+1543690361 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\expediente.cpp
+	"Expediente.h"
+
+1543697800 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\fecha.cpp
+	"Fecha.h"
+
+1543701808 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\listarevision.cpp
+	"ListaRevision.h"
+
+1543690594 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\menu.cpp
+	"Menu.h"
+
+1543628667 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\resultado.cpp
+	"Resultado.h"
+
+1543701494 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\revision.cpp
+	"Revision.h"
+
+1543628667 source:c:\users\usuario\desktop\obligatorio2.versiones\obligatorio_01122018_0\obl.pii-master\main\string.cpp
+	"string.h"
+	"boolean.h"
+

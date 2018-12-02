@@ -35,6 +35,7 @@ int main()
 
             printf("\nIngrese el codigo del expediente: ");
             scanf("%ld", &vCodigoexpediente);
+
             //Controlo que no exista en el sistema un expediente con el mismo numero
             if(!existeExpediente(vArbolExpedientes, vCodigoexpediente))
             {
@@ -44,6 +45,7 @@ int main()
             else
                 printf("No se puede realizar la carga, ya existe un expediente con ese codigo.\n");
             break;
+
             //Proceso de alta en el sistema de una nueva revision
         case 2:
 
@@ -64,11 +66,12 @@ int main()
             break;
 
         case 3:
-            printf("\nIngrese el codigo del expediente asociado a la revision: ");
+            printf("\nIngrese el codigo del expediente a eliminar: ");
             scanf("%ld", &vCodigoexpediente);
 
             if(existeExpediente(vArbolExpedientes,vCodigoexpediente))
-            {   printf("entro al if");
+            {
+
                 borrarExpedientePorCodigo(vArbolExpedientes,vCodigoexpediente);
                 borrarRevision(vListaRevisiones, vCodigoexpediente);
                 printf("\n---Se eliminaron los registros.---\n");
@@ -134,7 +137,7 @@ int main()
                 case 1:
                 {
                     String vApellido;
-                    printf("\nIngrese un apellido: \n");
+                    printf("\nIngrese un apellido: ");
                     scan(vApellido);
                     int cntExpedientesPorApellido = cantidadExpedientesPorEscribano(vArbolExpedientes,vApellido);
                     printf("\nCantidad de expedientes : %d \n",cntExpedientesPorApellido);

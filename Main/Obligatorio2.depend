@@ -391,53 +391,53 @@
 	"string.h"
 	"boolean.h"
 
-1543690865 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\arbol.cpp
+1543713997 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\arbol.cpp
 	"Arbol.h"
 
-1543691093 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\arbol.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\arbol.h
 	"Expediente.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\expediente.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\expediente.h
 	"String.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\string.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\string.h
 	"Boolean.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\boolean.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\boolean.h
 	<stdio.h>
 
-1543628667 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\archivo.cpp
+1543713997 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\archivo.cpp
 	"Archivo.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\archivo.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\archivo.h
 	"Arbol.h"
 	"ListaRevision.h"
 
-1543691516 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\listarevision.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\listarevision.h
 	"Revision.h"
 	"Expediente.h"
 
-1543689020 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\revision.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\revision.h
 	"Fecha.h"
 	"Resultado.h"
 	"string.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\fecha.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\fecha.h
 	"Boolean.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\resultado.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\resultado.h
 	<stdio.h>
 
-1543690361 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\expediente.cpp
+1543713997 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\expediente.cpp
 	"Expediente.h"
 
-1543692460 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\fecha.cpp
+1543782576 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\fecha.cpp
 	"Fecha.h"
 
-1543691521 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\listarevision.cpp
+1543781497 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\listarevision.cpp
 	"ListaRevision.h"
 
-1543692680 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\main.cpp
+1543781868 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\main.cpp
 	<iostream>
 	<stdio.h>
 	"Menu.h"
@@ -445,19 +445,19 @@
 	"Revision.h"
 	"Archivo.h"
 
-1543628667 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\menu.h
+1543713997 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\menu.h
 	"Boolean.h"
 
-1543690594 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\menu.cpp
+1543714837 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\menu.cpp
 	"Menu.h"
 
-1543628667 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\resultado.cpp
+1543713997 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\resultado.cpp
 	"Resultado.h"
 
-1543692066 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\revision.cpp
+1543782576 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\revision.cpp
 	"Revision.h"
 
-1543628667 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\string.cpp
+1543713997 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\string.cpp
 	"string.h"
 	"boolean.h"
 

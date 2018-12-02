@@ -50,15 +50,19 @@ void agregarRevisionBack(Lista &l, Revision rev)
 
 void borrarRevision(Lista &l, long codigo)
 {
-    while(l != NULL)
+    if (l != NULL)
     {
-        if(codigo == darCodigoExpediente(l -> revisiones))
+        if (codigo == darCodigoExpediente(l->revisiones))
         {
             Lista aux = l;
-            l = l->sig;
+            l = l -> sig;
             delete aux;
+            borrarRevision (l, codigo);
         }
+        else
+            borrarRevision (l -> sig, codigo);
     }
+
 }
 //PRECONDICION: La revision debe existir
 

@@ -19,7 +19,7 @@ void cargarFecha(Fecha &fec)
 //Muestra una fecha
 void mostrarFecha(Fecha fec)
 {
-    printf("Fecha: %d %d %d", fec.dia, fec.mes, fec.anio);
+    printf("%d-%d-%d", fec.dia, fec.mes, fec.anio);
 
 }
 

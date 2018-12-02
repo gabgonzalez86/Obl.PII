@@ -24,13 +24,13 @@ void cargarRevision(Revision &rev, long codigoExp, Fecha fechaRev)
 
 void mostrarRevision(Revision rev)
 {
-    printf("\nDatos de la revision:\n");
+
     mostrarFecha(rev.fchRealizacion);
-    printf(" - Motivo: ");
+    printf(" - ");
     print(rev.motivo);
-    printf(" - Codigo expediente: ");
+    printf(" - ");
     printf("%ld", rev.codigoExpediente);
-    printf(" - Resultado: ");
+    printf(" - ");
     mostrarResultado(rev.resultadoRevision);
 }
 

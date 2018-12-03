@@ -122,7 +122,7 @@ int main()
 
                     }
                     else
-                        printf("\nNo existe Expediente con el codigo ingresado.\n");
+                        printf("\No existe Expediente con el codigo ingresado.\n");
                     break;
                 case 5:
                     vSalirSubMenuListado=TRUE;
@@ -165,12 +165,13 @@ int main()
                         {
                             long vCodigo = -1;
                             int vCantidad = -1;
-                            masRevProExp(vArbolExpedientes, vListaRevisiones, vCodigo, vCantidad);
+                            masRevPorExp(vListaRevisiones, vCodigo, vCantidad);
                             printf("\nEl Expediente con mas revisiones es el %ld y tiene una cantidad de %d Revisiones. \n ", vCodigo, vCantidad);
                         }
                     else
                         printf("\nNo hay Expedientes ingresados\n");
                     }
+                break;
                 case 3:
                     Fecha vFechaDesde,
                           vFechaHasta;

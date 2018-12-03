@@ -42,7 +42,6 @@ void mostrarArbol(Arbol pArbolExpedientes);
 //Devuelve la cantidad de expedientes por apellido
 int cantidadExpedientesPorEscribano(Arbol a, String pApellido);
 
-void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad);
 
 //Devuelve el valor mínimo
 Expediente Minimo(Arbol a);

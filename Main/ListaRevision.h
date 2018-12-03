@@ -37,6 +37,9 @@ void listarRevisionesPorExpediente (Lista l, long codigo);
 
 int cantidadRevPorExp(Lista l, long pCodigo);
 
+
+void masRevPorExp(Lista pListaRevisiones, long &pCodigo, int &pCantidad);
+
 //Devuelvela cantidad de revisiones por fecha
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);
 

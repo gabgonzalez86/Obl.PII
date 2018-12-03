@@ -165,7 +165,7 @@ int main()
                         {
                             long vCodigo = -1;
                             int vCantidad = -1;
-                            masRevPorExp(vListaRevisiones, vCodigo, vCantidad);
+                            masRevProExp(vArbolExpedientes, vListaRevisiones, vCodigo, vCantidad);
                             printf("\nEl Expediente con mas revisiones es el %ld y tiene una cantidad de %d Revisiones. \n ", vCodigo, vCantidad);
                         }
                     else

@@ -101,27 +101,6 @@ int cantidadRevPorExp(Lista l, long pCodigo)
     return cntRevisiones;
 }
 
-
-void masRevPorExp(Lista pListaRevisiones, long &pCodigo, int &pCantidad)
-{
-    int vCantidadAux = 0;
-    long vCodigoAux;
-     if(pListaRevisiones!=NULL)
-    {
-        masRevPorExp(pListaRevisiones, pCodigo, pCantidad);
-        vCodigoAux = darCodigoExpediente(pListaRevisiones->revisiones);
-        vCantidadAux = cantidadRevPorExp(pListaRevisiones, vCodigoAux);
-        if(vCantidadAux > pCantidad)
-        {
-            pCantidad = vCantidadAux;
-            pCodigo = vCodigoAux;
-        }
-        masRevPorExp(pListaRevisiones, pCodigo, pCantidad);
-    }
-}
-
-
-
 int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
 {
     int cntRevisiones = 0;

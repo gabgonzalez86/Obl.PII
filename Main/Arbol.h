@@ -70,6 +70,9 @@ void mayorMenorExpediente(Arbol a);
 
 //Muestra los expedientes del arbol
 void listarExpedientes(Arbol a);
+
+void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad);
+
 //FALTA
 
 //agrega al archivo los datos del árbol

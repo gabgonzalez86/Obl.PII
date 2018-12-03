@@ -10,7 +10,7 @@ void cargarFecha(Fecha &fec)
 //agregar while
    while(!validarFecha(fec))
    {
-        printf("\nFecha ingresada incorrecta.");
+        printf("Fecha ingresada incorrecta, ingresela nuevamente: ");
         cargarFecha(fec);
    }
 

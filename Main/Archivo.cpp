@@ -1,6 +1,6 @@
 #include "Archivo.h"
 
-boolean existeExpediente(String pNomArch)
+boolean existeArchivoExpediente(String pNomArch)
 {
     boolean vResultado = FALSE;
 

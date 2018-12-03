@@ -3,7 +3,7 @@
 #include "Arbol.h"
 #include "ListaRevision.h"
 
-boolean existeExpediente(String pNomArch);
+boolean existeArchivoExpediente(String pNomArch);
 
 boolean expedienteVacio (String pNomArch);
 

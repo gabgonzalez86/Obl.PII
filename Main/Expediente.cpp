@@ -74,10 +74,10 @@ void AgregarExpAArchivo(Expediente exp, FILE * f)
 void leerExpDeArchivo(Expediente &exp, FILE * f)
 {
     strcrear(exp.caratula);
-    strcrear(exp.nombre);
-    strcrear(exp.apellido);
     leerStringDeArchivo(exp.caratula, f);
+    strcrear(exp.nombre);
     leerStringDeArchivo(exp.nombre, f);
+    strcrear(exp.apellido);
     leerStringDeArchivo(exp.apellido, f);
     fread(&exp.codigo, sizeof(long), 1, f);
     fread(&exp.cantidadPaginas, sizeof(int), 1, f);

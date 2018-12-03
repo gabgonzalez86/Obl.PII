@@ -6,7 +6,6 @@
 #include "Archivo.h"
 
 
-
 int main()
 {
 
@@ -20,10 +19,23 @@ int main()
     Revision   vRevision;
     Arbol vArbolExpedientes;
     Lista vListaRevisiones;
+    FILE * fd;
 
     crearArbol(vArbolExpedientes);
 
     crearLista(vListaRevisiones);
+
+    if(existeArchivoExpediente("Expedientes.dat"))
+        leerArbolDeArchivo(vArbolExpedientes, "Expedientes.dat");
+    else
+        fd = fopen("Expedientes.dat", "wb");
+
+
+    if(existeRevision("Revisiones.dat"))
+        leerListaDeArchivo(vListaRevisiones, "Revisiones.dat");
+    else
+        fd = fopen("Revisiones.dat", "wb");
+
 
     do
     {
@@ -214,6 +226,8 @@ int main()
 
         case 6:
             vSalir = TRUE;
+            agregarListaAArchivo(vListaRevisiones,"Revisiones.dat");
+            agregarArbolAArchivo(vArbolExpedientes,"Expedientes.dat");
             break;
 
         default:

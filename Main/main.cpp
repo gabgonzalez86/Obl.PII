@@ -69,9 +69,13 @@ int main()
                 Fecha vFchRevision;
                 printf("Ingrese la fecha de revision en el siguiente formato dd mm aaaa: ");
                 cargarFecha(vFchRevision);
-
-                cargarRevision(vRevision, vCodigoexpediente, vFchRevision);
-                agregarRevisionFront(vListaRevisiones, vRevision);
+                if(esMayorIgual(vFchRevision, fechaPrimerElementoListado(vListaRevisiones)))
+                {
+                    cargarRevision(vRevision, vCodigoexpediente, vFchRevision);
+                    agregarRevisionFront(vListaRevisiones, vRevision);
+                }
+                else
+                    printf("\nLa fecha ingresada no es mayor a la fecha del ultimo registro.");
             }
             else
                 printf("\n---No existe expediente para asociar la revision.---\n");
@@ -194,7 +198,7 @@ int main()
 
                     printf("\nIngrese la fecha hasta (dd mm aaaa): ");
                     cargarFecha(vFechaHasta);
-                    if(esMayor(vFechaHasta, vFechaDesde))
+                    if(esMayorIgual(vFechaHasta, vFechaDesde))
                     {
                         printf("Se realizaron %d revisiones durante ese periodo.\n", cantidadRevisionesPorFecha(vListaRevisiones, vFechaDesde, vFechaHasta));
                     }

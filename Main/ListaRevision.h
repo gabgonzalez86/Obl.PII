@@ -15,8 +15,8 @@ void crearLista(Lista &l);
 //Verifica si la lista esta vacia
 boolean listaVacia(Lista l);
 
-//Devuelve el primer valor de la lista
-Revision primerElementoListado(Lista l);
+//Devuelve la fecha del primer elemento de la lista
+Fecha fechaPrimerElementoListado(Lista l);
 //PRECONDICION: La lista no puede estar vacia
 
 //Agrega una revision al Principio listado

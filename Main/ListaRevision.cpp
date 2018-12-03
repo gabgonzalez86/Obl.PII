@@ -14,9 +14,9 @@ boolean listaVacia(Lista l)
     return es;
 }
 
-Revision primerElementoListado(Lista l)
+Fecha fechaPrimerElementoListado(Lista l)
 {
-    return l -> revisiones;
+    return darFechaRevision(l -> revisiones);
 }//PRECONDICION: La lista no puede estar vacia
 
 void agregarRevisionFront(Lista &l, Revision rev)
@@ -106,7 +106,7 @@ int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
     int cntRevisiones = 0;
     while(l != NULL)
     {
-        if(esMayor(l->revisiones.fchRealizacion, fec1) && !esMayor(l->revisiones.fchRealizacion, fec2))
+        if(esMayorIgual(darFechaRevision(l->revisiones), fec1) && esMenorIgual(darFechaRevision(l->revisiones), fec2))
         {
             cntRevisiones++;
         }

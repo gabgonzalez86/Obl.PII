@@ -28,8 +28,12 @@ int darAnio(Fecha fec);
 //Devuelve la fecha
 Fecha darFecha(Fecha fec);
 
-//Devuelve si la primer fecha es mayor a la segunda
-boolean esMayor(Fecha fec1, Fecha fec2);
+//Devuelve si la primer fecha es menor o igual a la segunda
+boolean esMenorIgual(Fecha fec1, Fecha fec2);
+
+//Devuelve si la primer fecha es mayor o igual a la segunda
+boolean esMayorIgual(Fecha fec1, Fecha fec2);
+
 
 //agrega al archivo los datos de la Fecha
 void agregarFechaAArchivo(Fecha pFecha, FILE * f);

@@ -1,49 +1,49 @@
 # depslib dependency file v1.0
-1543804842 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\arbol.cpp
-	"Arbol.h"
+1543838117 source:c:\users\java\desktop\obl.pii-master\main\archivo.cpp
+	"Archivo.h"
 
-1543798850 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\arbol.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\archivo.h
+	"Arbol.h"
+	"ListaRevision.h"
+
+1543788398 c:\users\java\desktop\obl.pii-master\main\arbol.h
 	"Expediente.h"
 	"ListaRevision.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\expediente.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\expediente.h
 	"String.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\string.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\string.h
 	"Boolean.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\boolean.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\boolean.h
 	<stdio.h>
 
-1543798727 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\listarevision.h
+1543838489 c:\users\java\desktop\obl.pii-master\main\listarevision.h
 	"Revision.h"
 	"Expediente.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\revision.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\revision.h
 	"Fecha.h"
 	"Resultado.h"
 	"string.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\fecha.h
+1543839825 c:\users\java\desktop\obl.pii-master\main\fecha.h
 	"Boolean.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\resultado.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\resultado.h
 	<stdio.h>
 
-1543802251 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\archivo.cpp
-	"Archivo.h"
-
-1543802251 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\archivo.h
-	"Arbol.h"
-	"ListaRevision.h"
-
-1543793688 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\expediente.cpp
+1543788398 source:c:\users\java\desktop\obl.pii-master\main\expediente.cpp
 	"Expediente.h"
 
-1543801739 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\fecha.cpp
+1543839313 source:c:\users\java\desktop\obl.pii-master\main\fecha.cpp
 	"Fecha.h"
 
-1543804087 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\main.cpp
+1543839328 source:c:\users\java\desktop\obl.pii-master\main\listarevision.cpp
+	"ListaRevision.h"
+
+1543839340 source:c:\users\java\desktop\obl.pii-master\main\main.cpp
 	<iostream>
 	<stdio.h>
 	"Menu.h"
@@ -51,22 +51,22 @@
 	"Revision.h"
 	"Archivo.h"
 
-1543793688 c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\menu.h
+1543788398 c:\users\java\desktop\obl.pii-master\main\menu.h
 	"Boolean.h"
 
-1543793688 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\menu.cpp
+1543788398 source:c:\users\java\desktop\obl.pii-master\main\menu.cpp
 	"Menu.h"
 
-1543793688 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\resultado.cpp
+1543788398 source:c:\users\java\desktop\obl.pii-master\main\resultado.cpp
 	"Resultado.h"
 
-1543793688 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\revision.cpp
+1543838117 source:c:\users\java\desktop\obl.pii-master\main\revision.cpp
 	"Revision.h"
 
-1543793688 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\string.cpp
+1543788398 source:c:\users\java\desktop\obl.pii-master\main\string.cpp
 	"string.h"
 	"boolean.h"
 
-1543798727 source:c:\users\guillermo\desktop\ude\programación ii\obl.pii-master\main\listarevision.cpp
-	"ListaRevision.h"
+1543837492 source:c:\users\java\desktop\obl.pii-master\main\arbol.cpp
+	"Arbol.h"
 

@@ -110,7 +110,7 @@ boolean revisionPertenece (String pNomArch, Revision pRevision)
 
     while(!feof(f) && !vEncontrado)
     {
-        if(vAuxRevision.codigoExpediente==pRevision.codigoExpediente)
+        if(darCodigoExpediente(vAuxRevision)==darCodigoExpediente(pRevision))
             vEncontrado = TRUE;
         else
         {

@@ -95,30 +95,63 @@ Fecha darFecha(Fecha fec)
     return fec;
 }
 
-boolean esMayor(Fecha fec1, Fecha fec2)
+boolean esMenorIgual(Fecha fec1, Fecha fec2)
 {
-  boolean  mayor = FALSE;
+  boolean  menorIgual = FALSE;
 
-    if(darAnio(fec1)> darAnio(fec2))
-        mayor = TRUE;
+    if(darAnio(fec1) == darAnio(fec2) && darMes(fec1) == darMes(fec2) && darDia(fec1)== darDia(fec2))
+       menorIgual = TRUE;
     else
-        if(darAnio(fec2)> darAnio(fec1))
-            mayor = FALSE;
+        if(darAnio(fec1) < darAnio(fec2))
+            menorIgual = TRUE;
         else
-            if(darMes(fec1)>darMes(fec2))
-                mayor = TRUE;
+            if(darAnio(fec2) < darAnio(fec1))
+                menorIgual = FALSE;
             else
-                if(darMes(fec2)>darMes(fec1))
-                   mayor = FALSE;
-                 else
-                    if(darDia(fec1)>darDia(fec2))
-                        mayor = TRUE;
-                    else
-                        mayor = FALSE;
+                if(darMes(fec1) < darMes(fec2))
+                    menorIgual = TRUE;
+                else
+                    if(darMes(fec2) < darMes(fec1))
+                       menorIgual = FALSE;
+                     else
+                        if(darDia(fec1) < darDia(fec2))
+                            menorIgual = TRUE;
+                        else
+                            menorIgual = FALSE;
 
-    return mayor;
+    return menorIgual;
 
 }
+
+boolean esMayorIgual(Fecha fec1, Fecha fec2)
+{
+  boolean  mayorIgual = FALSE;
+
+    if(darAnio(fec1) == darAnio(fec2) && darMes(fec1) == darMes(fec2) && darDia(fec1)== darDia(fec2))
+       mayorIgual = TRUE;
+    else
+        if(darAnio(fec1)> darAnio(fec2))
+            mayorIgual = TRUE;
+        else
+            if(darAnio(fec2)> darAnio(fec1))
+                mayorIgual = FALSE;
+            else
+                if(darMes(fec1)>darMes(fec2))
+                    mayorIgual = TRUE;
+                else
+                    if(darMes(fec2)>darMes(fec1))
+                       mayorIgual = FALSE;
+                     else
+                        if(darDia(fec1)>darDia(fec2))
+                            mayorIgual = TRUE;
+                        else
+                            mayorIgual = FALSE;
+
+    return mayorIgual;
+
+}
+
+
 
 void agregarFechaAArchivo(Fecha pFecha, FILE * f)
 {

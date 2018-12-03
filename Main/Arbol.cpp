@@ -220,7 +220,7 @@ void agregarArbolAuxArchivo(Arbol a, FILE * f)
 {
     if(a != NULL)
     {
-        fwrite (&(a->expedientes), sizeof (Expediente), 1, f);
+        AgregarExpAArchivo(a->expedientes, f);
         agregarArbolAuxArchivo(a-> hizq, f);
         agregarArbolAuxArchivo(a-> hder, f);
     }
@@ -243,7 +243,7 @@ void leerArbolDeArchivo(Arbol &a, String pArchivo)
     while(!feof(f))
     {
         GuardarExpediente(a, vExp);
-        fread(&vExp, sizeof (Expediente), 1, f);
+        leerExpDeArchivo(vExp, f);
     }
     fclose (f);
 }

@@ -19,67 +19,66 @@ Fecha fechaPrimerElementoListado(Lista l)
     return darFechaRevision(l -> revisiones);
 }//PRECONDICION: La lista no puede estar vacia
 
-void agregarRevisionFront(Lista &l, Revision rev)
+void agregarRevisionFront(Lista &l, Revision pRev)
 {
-    Lista aux = new nodoLista;
-    aux -> revisiones = rev;
-    aux -> sig = l;
-    l = aux;
+    Lista vAux = new nodoLista;
+    vAux -> revisiones = pRev;
+    vAux -> sig = l;
+    l = vAux;
 }
 
-void agregarRevisionBack(Lista &l, Revision rev)
+void agregarRevisionBack(Lista &l, Revision pRev)
 {
     Lista vLista = new nodoLista;
-    vLista ->revisiones = rev;
+    vLista ->revisiones = pRev;
     vLista -> sig = NULL;
     //se puede usar la funcion vacia
-    if(l == NULL)
+    if(listaVacia(l))
     {
         l = vLista;
     }
     else
     {
-        Lista aux = l;
-        while (aux -> sig != NULL)
+        Lista vAux = l;
+        while (vAux -> sig != NULL)
         {
-            aux = aux -> sig;
+            vAux = vAux -> sig;
         }
-        aux -> sig = vLista;
+        vAux -> sig = vLista;
     }
 }
 
-void borrarRevision(Lista &l, long codigo)
+void borrarRevision(Lista &l, long pCodigo)
 {
-    if (l != NULL)
+    if (!listaVacia(l))
     {
-        if (codigo == darCodigoExpediente(l->revisiones))
+        if (pCodigo == darCodigoExpediente(l->revisiones))
         {
-            Lista aux = l;
+            Lista vAux = l;
             l = l -> sig;
-            delete aux;
-            borrarRevision (l, codigo);
+            delete vAux;
+            borrarRevision (l, pCodigo);
         }
         else
-            borrarRevision (l -> sig, codigo);
+            borrarRevision (l -> sig, pCodigo);
     }
-
 }
 //PRECONDICION: La revision debe existir
 
 void listarRevisiones (Lista l)
 {
-    while(l != NULL)
+    while(!listaVacia(l))
     {
         mostrarRevision(l -> revisiones);
         l = l -> sig;
     }
 }
-//asumo que ingresa un nro expediente valido? agregar sele
-void listarRevisionesPorExpediente (Lista l, long codigo)
+
+void listarRevisionesPorExpediente (Lista l, long pCodigo)
 {
-    while(l != NULL )
+    while(!listaVacia(l))
     {
-        if( darCodigoExpediente(l -> revisiones) == codigo)
+        if( darCodigoExpediente(l -> revisiones) == pCodigo)
         {
             mostrarRevision(l -> revisiones);
         }
@@ -89,35 +88,35 @@ void listarRevisionesPorExpediente (Lista l, long codigo)
 
 int cantidadRevPorExp(Lista l, long pCodigo)
 {
-    int cntRevisiones = 0;
-    while(l != NULL)
+    int vCntRevisiones = 0;
+    while(!listaVacia(l))
     {
         if(darCodigoExpediente(l->revisiones) == pCodigo)
         {
-            cntRevisiones++;
+            vCntRevisiones++;
         }
         l = l -> sig;
     }
-    return cntRevisiones;
+    return vCntRevisiones;
 }
 
-int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2)
+int cantidadRevisionesPorFecha(Lista l, Fecha pFec1, Fecha pFec2)
 {
-    int cntRevisiones = 0;
-    while(l != NULL)
+    int vCntRevisiones = 0;
+    while(!listaVacia(l))
     {
-        if(esMayorIgual(darFechaRevision(l->revisiones), fec1) && esMenorIgual(darFechaRevision(l->revisiones), fec2))
+        if(esMayorIgual(darFechaRevision(l->revisiones), pFec1) && esMenorIgual(darFechaRevision(l->revisiones), pFec2))
         {
-            cntRevisiones++;
+            vCntRevisiones++;
         }
         l = l -> sig;
     }
-    return cntRevisiones;
+    return vCntRevisiones;
 }
 
 void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas, int &pPendientes)
 {
-    while(l != NULL)
+    while(!listaVacia(l))
     {
         switch(darResultadoRevision(l -> revisiones))
         {
@@ -134,9 +133,6 @@ void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas,
         l = l -> sig;
     }
 }
-
-
-
 
 void agregarListaAArchivo(Lista L, String pArchivo)
 {

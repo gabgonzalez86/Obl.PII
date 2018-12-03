@@ -8,8 +8,8 @@ void mostrarSubMenuListados(int &pOpcion);
 
 void mostrarSubMenuConsultas(int &pOpcion);
 
-boolean validarOpcionMenu(int opcion);
+boolean validarOpcionMenu(int pOpcion);
 
-boolean validarOpcionSubMenu(int opcion);
+boolean validarOpcionSubMenu(int pOpcion);
 
 #endif // MENU_H_INCLUDED

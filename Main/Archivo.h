@@ -1,25 +1,11 @@
 #ifndef ARCHIVO_H_INCLUDED
 #define ARCHIVO_H_INCLUDED
 #include "Arbol.h"
-#include "ListaRevision.h"
 
+//Devuelve si existe el archivo
 boolean existeArchivoExpediente(String pNomArch);
 
-boolean expedienteVacio (String pNomArch);
-
-boolean expedientePertenece (String pNomArch, Expediente pExpediente);
-
-
-void agregarRevision(String pNomArch, Revision pRevision);
-
+//Devuelve si existe el archivo
 boolean existeRevision(String pNomArch);
-
-boolean revisionVacio (String pNomArch);
-
-boolean revisionPertenece (String pNomArch, Revision pRevision);
-
-
-
-
 
 #endif // ARCHIVO_H_INCLUDED

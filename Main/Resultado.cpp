@@ -1,6 +1,5 @@
 #include "Resultado.h"
 
-
 void mostrarResultado(resultado r)
 {
     switch(r)

@@ -25,52 +25,31 @@ Arbol darHijoDerecho(Arbol a)
     return a->hder;
 }
 
-void GuardarExpediente(Arbol &a, Expediente exp)
+void GuardarExpediente(Arbol &a, Expediente pExp)
 {
-    if(a == NULL)
+    if(arbolVacio(a))
     {
         a = new nodo;
-        a->expedientes = exp;
+        a->expedientes = pExp;
         a->hizq = NULL;
         a->hder = NULL;
     }
     else
     {
-        if(darCodigo(exp) < darCodigo(a->expedientes))
-            GuardarExpediente(a->hizq, exp);
+        if(darCodigo(pExp) < darCodigo(a->expedientes))
+            GuardarExpediente(a->hizq, pExp);
         else
-            GuardarExpediente(a->hder, exp);
+            GuardarExpediente(a->hder, pExp);
     }
 }
 
 void mostrarArbol(Arbol pArbolExpedientes)
 {
-    if(pArbolExpedientes!=NULL)
+    if(!arbolVacio(pArbolExpedientes))
     {
         mostrarArbol(pArbolExpedientes->hizq);
         mostrarExpediente(pArbolExpedientes->expedientes);
         mostrarArbol(pArbolExpedientes->hder);
-    }
-
-}
-
-
-
-boolean existeExpediente(Arbol a, long codigo)
-{
-    if(a == NULL)
-        return FALSE;
-    else
-    {
-        if(codigo == darCodigo(a->expedientes))
-            return TRUE;
-        else
-        {
-            if(codigo < darCodigo(a->expedientes))
-                return existeExpediente(a->hizq, codigo);
-            else
-                return existeExpediente(a->hder, codigo);
-        }
     }
 }
 
@@ -78,7 +57,7 @@ int cantidadExpedientesPorEscribano(Arbol a, String pApellido)
 {
     String vApellido;
 
-    if(a == NULL)
+    if(arbolVacio(a))
         return 0;
     else
     {
@@ -96,7 +75,6 @@ Expediente Minimo(Arbol a)
      {
         a = a->hizq;
      }
-
      return (a->expedientes);
 }
 
@@ -106,81 +84,40 @@ Expediente Maximo(Arbol a)
      {
         a = a->hder;
      }
-
      return (a->expedientes);
 }
 
 void borrarMinimo(Arbol &a)
 {
-    Arbol aux;
+    Arbol vAux;
     if(a->hizq == NULL)
     {
-        aux = a->hder;
+        vAux = a->hder;
         delete a;
-        a = aux;
-
+        a = vAux;
     }
     else
         borrarMinimo(a->hizq);
 }
 
-void borrarExpediente(Arbol &a, Expediente exp)
-{
-    Arbol aux;
-    if(darCodigo(exp) == darCodigo(a->expedientes))
-    {
-        if(a->hder == NULL)
-        {
-            aux = a->hizq;
-            delete a;
-            a = aux;
-
-        }
-        else
-        {
-            if(a->hizq == NULL)
-            {
-                aux = a->hder;
-                delete a;
-                a = aux;
-
-
-            }
-            else
-            {
-                a->expedientes = Minimo(a->hder);
-                borrarMinimo(a->hder);
-            }
-        }
-    }
-    else
-    {
-        if(darCodigo(exp) < darCodigo(a->expedientes))
-            borrarExpediente(a->hizq, exp);
-        else
-            borrarExpediente(a->hder, exp);
-    }
-}
-
 void borrarExpedientePorCodigo(Arbol &a, long pCodigo)
 {
-    Arbol aux;
+    Arbol vAux;
     if(pCodigo == darCodigo(a->expedientes))
     {
         if(a->hder == NULL)
         {
-            aux = a->hizq;
+            vAux = a->hizq;
             delete a;
-            a = aux;
+            a = vAux;
         }
         else
         {
             if(a->hizq == NULL)
             {
-                aux = a->hder;
+                vAux = a->hder;
                 delete a;
-                a = aux;
-
+                a = vAux;
             }
             else
             {
@@ -198,11 +135,29 @@ void borrarExpedientePorCodigo(Arbol &a, long pCodigo)
     }
 }
 
+boolean existeExpediente(Arbol a, long pCodigo)
+{
+    if(arbolVacio(a))
+        return FALSE;
+    else
+    {
+        if(pCodigo == darCodigo(a->expedientes))
+            return TRUE;
+        else
+        {
+            if(pCodigo < darCodigo(a->expedientes))
+                return existeExpediente(a->hizq, pCodigo);
+            else
+                return existeExpediente(a->hder, pCodigo);
+        }
+    }
+}
+
 void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad)
 {
     int vCantidadAux = 0;
     long vCodigoAux;
-     if(pArbolExpedientes!=NULL)
+     if(!arbolVacio(pArbolExpedientes))
     {
         masRevProExp(pArbolExpedientes->hizq, pListaRevisiones, pCodigo, pCantidad);
         vCodigoAux = darCodigo(pArbolExpedientes->expedientes);
@@ -218,7 +173,7 @@ void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo
 
 void agregarArbolAuxArchivo(Arbol a, FILE * f)
 {
-    if(a != NULL)
+    if(!arbolVacio(a))
     {
         AgregarExpAArchivo(a->expedientes, f);
         agregarArbolAuxArchivo(a-> hizq, f);

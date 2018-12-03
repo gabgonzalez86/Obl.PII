@@ -20,29 +20,29 @@ Fecha fechaPrimerElementoListado(Lista l);
 //PRECONDICION: La lista no puede estar vacia
 
 //Agrega una revision al Principio listado
-void agregarRevisionFront(Lista &l, Revision rev);
+void agregarRevisionFront(Lista &l, Revision pRev);
 
 //Agrega una revision al Final listado
-void agregarRevisionBack(Lista &l, Revision rev);
+void agregarRevisionBack(Lista &l, Revision pRev);
 
 //Borra una revision en el listado
-void borrarRevision(Lista &l, long codigo);
+void borrarRevision(Lista &l, long pCodigo);
 //PRECONDICION: La revision debe existir
 
 //Muesta todas las revisiones realizadas
 void listarRevisiones (Lista l);
 
 //Muestra las revisiones para el expediente
-void listarRevisionesPorExpediente (Lista l, long codigo);
+void listarRevisionesPorExpediente (Lista l, long pCodigo);
 
+//Devuelve la cantidad de revisiones por expediente
 int cantidadRevPorExp(Lista l, long pCodigo);
 
 //Devuelvela cantidad de revisiones por fecha
-int cantidadRevisionesPorFecha(Lista l, Fecha fec1, Fecha fec2);
+int cantidadRevisionesPorFecha(Lista l, Fecha pFec1, Fecha pFec2);
 
+//Se obtienen la cantidad de revisiones que hay por cada tipo de resultado
 void cantidadRevisionesPorTipo(Lista l, int &pSatisfactorias, int &pIncompletas, int &pPendientes);
-
-int mayorCantidadRevisiones(Lista vListaRevisiones);
 
 // Abre el archivo para escritura y agrega al archivo los datos de la lista
 void agregarListaAArchivo(Lista L, String pArchivo);

@@ -70,3 +70,71 @@
 1543837492 source:c:\users\java\desktop\obl.pii-master\main\arbol.cpp
 	"Arbol.h"
 
+1543871519 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\archivo.cpp
+	"Archivo.h"
+
+1543871519 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\archivo.h
+	"Arbol.h"
+
+1543873421 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\arbol.h
+	"ListaRevision.h"
+
+1543874463 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\listarevision.h
+	"Revision.h"
+	"Expediente.h"
+
+1543875558 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"string.h"
+
+1543873875 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\fecha.h
+	"Boolean.h"
+
+1543873404 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\boolean.h
+	<stdio.h>
+
+1543875408 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\resultado.h
+	<stdio.h>
+
+1543876006 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\string.h
+	"Boolean.h"
+
+1543873207 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\expediente.h
+	"string.h"
+
+1543873393 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\expediente.cpp
+	"Expediente.h"
+
+1543873986 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\fecha.cpp
+	"Fecha.h"
+
+1543875311 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\listarevision.cpp
+	"ListaRevision.h"
+
+1543878218 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Archivo.h"
+
+1543875352 c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\menu.h
+	"Boolean.h"
+
+1543875352 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\menu.cpp
+	"Menu.h"
+
+1543875408 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\resultado.cpp
+	"Resultado.h"
+
+1543875922 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\revision.cpp
+	"Revision.h"
+
+1543875999 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\string.cpp
+	"string.h"
+	"boolean.h"
+
+1543872717 source:c:\users\usuario\desktop\obligatorio2.versiones\versionfinal\main\arbol.cpp
+	"Arbol.h"
+

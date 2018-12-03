@@ -86,7 +86,6 @@ void agregarStringAArchivo(String s, FILE * f)
         fwrite(&s[i], sizeof(char), 1, f);
         i++;
     }
-
     fwrite(&s[i], sizeof(char), 1, f);
 }
 

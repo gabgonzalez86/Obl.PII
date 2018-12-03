@@ -1,8 +1,6 @@
 #ifndef ARBOL_H_INCLUDED
 #define ARBOL_H_INCLUDED
-#include "Expediente.h"
 #include "ListaRevision.h"
-
 
 typedef struct nodoA {Expediente expedientes;
                       nodoA * hizq;
@@ -10,7 +8,6 @@ typedef struct nodoA {Expediente expedientes;
                      }nodo;
 
 typedef nodo * Arbol;
-
 
 //Crea un arbol
 void crearArbol(Arbol &a);
@@ -31,17 +28,14 @@ Arbol darHijoDerecho(Arbol a);
 //PRECONDICION: El arbol no puede estar vacio
 
 // Guarda un nuevo Expediente
-void GuardarExpediente(Arbol &a, Expediente exp);
+void GuardarExpediente(Arbol &a, Expediente pExp);
 //PRECONDICION: verificar que no exista el expediente
 
 //Muestra los registros del arbol de expedientes en orden
 void mostrarArbol(Arbol pArbolExpedientes);
 
-
-//FALTA
 //Devuelve la cantidad de expedientes por apellido
 int cantidadExpedientesPorEscribano(Arbol a, String pApellido);
-
 
 //Devuelve el valor mínimo
 Expediente Minimo(Arbol a);
@@ -55,25 +49,13 @@ Expediente Maximo(Arbol a);
 void borrarMinimo(Arbol &a);
 //PRECONDICION: verificar que el arbol NO este vacío
 
-//Borra el exepediente del arbol
-void borrarExpediente(Arbol &a, Expediente exp);
-//PRECONDICION: El expediente debe existir
-
 void borrarExpedientePorCodigo(Arbol &a, long pCodigo);
 
-//FALTA
 //Verifica si existe el expediente
-boolean existeExpediente(Arbol a, long codigo);
+boolean existeExpediente(Arbol a, long pCodigo);
 
-//Devuelve el mayor expediete y el menor expediente
-void mayorMenorExpediente(Arbol a);
-
-//Muestra los expedientes del arbol
-void listarExpedientes(Arbol a);
-
+//Se obtiene el expediente que tiene mas revisiones
 void masRevProExp(Arbol pArbolExpedientes, Lista pListaRevisiones, long &pCodigo, int &pCantidad);
-
-//FALTA
 
 //agrega al archivo los datos del árbol
 void agregarArbolAuxArchivo(Arbol a, FILE * f);

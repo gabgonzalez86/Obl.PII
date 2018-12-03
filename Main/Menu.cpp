@@ -12,8 +12,6 @@ void mostrarMenu(int &pOpcion)
     printf("\nSeleccione una opcion: ");
     fflush(stdin);
     scanf("%d", &pOpcion);
-
-
 }
 
 void mostrarSubMenuListados(int &pOpcion)
@@ -28,7 +26,6 @@ void mostrarSubMenuListados(int &pOpcion)
         scanf("%d", &pOpcion);
 }
 
-
 void mostrarSubMenuConsultas(int &pOpcion)
 {
         printf("\n1 - Contar expedientes por apellido de escribano.");
@@ -40,7 +37,6 @@ void mostrarSubMenuConsultas(int &pOpcion)
         fflush(stdin);
         scanf("%d", &pOpcion);
 }
-
 
 boolean validarOpcionMenu(int pOpcion)
 {

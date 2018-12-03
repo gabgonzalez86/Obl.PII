@@ -1,56 +1,5 @@
 #include "Revision.h"
 
-void cargarRevision(Revision &rev, long codigoExp, Fecha fechaRev)
-{
-    rev.codigoExpediente = codigoExp;
-    rev.fchRealizacion = fechaRev;
-
-    printf("Motivo: ");
-    strcrear(rev.motivo);
-    scan(rev.motivo);
-
-    printf("Ingrese un resultado (1- Satisfacoria, 2-Incompleta, 3- Pendiente ): ");
-    int opcion;
-    scanf("%d",&opcion);
-
-    while(opcion >3 || opcion <1)
-    {
-        printf("Opcion incorrecta.\n");
-        scanf("%d",&opcion);
-    }
-
-    cargarResultado(opcion, rev.resultadoRevision);
-}
-
-void mostrarRevision(Revision rev)
-{
-
-    mostrarFecha(rev.fchRealizacion);
-    printf(" - ");
-    print(rev.motivo);
-    printf(" - ");
-    printf("%ld", rev.codigoExpediente);
-    printf(" - ");
-    mostrarResultado(rev.resultadoRevision);
-}
-
-void cargarResultado(int opcion, resultado &resultadoRevision)
-{
-    switch(opcion)
-    {
-    case 1:
-        resultadoRevision = Satisfacoria;
-        break;
-
-    case 2:
-        resultadoRevision = Incompleta;
-        break;
-    case 3:
-        resultadoRevision = Pendiente;
-        break;
-    }
-}
-
 Fecha darFechaRevision(Revision rev)
 {
     return rev.fchRealizacion;
@@ -72,19 +21,68 @@ resultado darResultadoRevision(Revision rev)
     return rev.resultadoRevision;
 }
 
-void agregarRevAArchivo(Revision rev, FILE * f)
+void cargarRevision(Revision &pRev, long pCodigoExp, Fecha pFechaRev)
 {
-    agregarStringAArchivo(rev.motivo, f);
-    agregarFechaAArchivo(rev.fchRealizacion, f);
-    fwrite(&rev.codigoExpediente, sizeof(long), 1, f);
-    fwrite(&rev.resultadoRevision, sizeof(resultado), 1, f);
+    pRev.codigoExpediente = pCodigoExp;
+    pRev.fchRealizacion = pFechaRev;
+
+    printf("Motivo: ");
+    strcrear(pRev.motivo);
+    scan(pRev.motivo);
+
+    printf("Ingrese un resultado (1- Satisfacoria, 2-Incompleta, 3- Pendiente ): ");
+    int vOpcion;
+    scanf("%d",&vOpcion);
+
+    while(vOpcion >3 || vOpcion <1)
+    {
+        printf("Opcion incorrecta.\n");
+        scanf("%d",&vOpcion);
+    }
+    cargarResultado(vOpcion, pRev.resultadoRevision);
 }
 
-void leerRevDeArchivo(Revision &rev, FILE * f)
+void mostrarRevision(Revision pRev)
 {
-    strcrear(rev.motivo);
-    leerStringDeArchivo(rev.motivo, f);
-    leerFechaDeArchivo(rev.fchRealizacion, f);
-    fread(&rev.codigoExpediente, sizeof(long), 1, f);
-    fread(&rev.resultadoRevision, sizeof(resultado), 1, f);
+    mostrarFecha(pRev.fchRealizacion);
+    printf(" - ");
+    print(pRev.motivo);
+    printf(" - ");
+    printf("%ld", pRev.codigoExpediente);
+    printf(" - ");
+    mostrarResultado(pRev.resultadoRevision);
+}
+
+void cargarResultado(int pOpcion, resultado &pResultadoRevision)
+{
+    switch(pOpcion)
+    {
+    case 1:
+        pResultadoRevision = Satisfacoria;
+        break;
+
+    case 2:
+        pResultadoRevision = Incompleta;
+        break;
+    case 3:
+        pResultadoRevision = Pendiente;
+        break;
+    }
+}
+
+void agregarRevAArchivo(Revision pRev, FILE * f)
+{
+    agregarStringAArchivo(pRev.motivo, f);
+    agregarFechaAArchivo(pRev.fchRealizacion, f);
+    fwrite(&pRev.codigoExpediente, sizeof(long), 1, f);
+    fwrite(&pRev.resultadoRevision, sizeof(resultado), 1, f);
+}
+
+void leerRevDeArchivo(Revision &pRev, FILE * f)
+{
+    strcrear(pRev.motivo);
+    leerStringDeArchivo(pRev.motivo, f);
+    leerFechaDeArchivo(pRev.fchRealizacion, f);
+    fread(&pRev.codigoExpediente, sizeof(long), 1, f);
+    fread(&pRev.resultadoRevision, sizeof(resultado), 1, f);
 }

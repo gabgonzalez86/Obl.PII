@@ -1,6 +1,6 @@
 #ifndef EXPEDIENTE_H_INCLUDED
 #define EXPEDIENTE_H_INCLUDED
-#include "String.h"
+#include "string.h"
 
 typedef struct {long codigo;
                 String caratula;
@@ -9,41 +9,40 @@ typedef struct {long codigo;
                 int cantidadPaginas ;
                }Expediente;
 
-
-//Carga el expediente
-void cargarExpediente(Expediente &exp, long codigo);
-//PRECONDICION: se debe validar que NO exista el código de Expediente
-
-//Muestra los datos del expediente
-void mostrarExpediente (Expediente exp);
-//PRECONDICION: El expediente debe existir
-
 //Devuelve el codigo del expediente
-long darCodigo(Expediente exp);
+long darCodigo(Expediente pExp);
 //PRECONDICION: El expediente debe existir
 
 //Devuelve el nombre del escribano
-void darNombreExpediente(Expediente exp, String &pNombre);
+void darNombreExpediente(Expediente pExp, String &pNombre);
 //PRECONDICION: El expediente no puede estar vacio
 
 //Devuelve el apellido del escribano
-void darApellidoExpediente(Expediente exp, String &pApellido);
+void darApellidoExpediente(Expediente pExp, String &pApellido);
 //PRECONDICION: El expediente no puede estar vacio
 
 //Devuelve la caratula del expediente
-void darCaratula(Expediente exp, String &pCaratula);
+void darCaratula(Expediente pExp, String &pCaratula);
 //PRECONDICION: El expediente no puede estar vacio
 
 //Devuelve la cantidad de paginas del expediente
-int  darCantidadPaginas (Expediente exp);
+int  darCantidadPaginas (Expediente pExp);
+//PRECONDICION: El expediente debe existir
+
+//Carga el expediente
+void cargarExpediente(Expediente &pExp, long pCodigo);
+//PRECONDICION: se debe validar que NO exista el código de Expediente
+
+//Muestra los datos del expediente
+void mostrarExpediente (Expediente pExp);
 //PRECONDICION: El expediente debe existir
 
 //agrega al archivo los datos del Expediente
-void AgregarExpAArchivo(Expediente exp, FILE * f);
+void AgregarExpAArchivo(Expediente pExp, FILE * f);
 //PRECONDICION: El archivo debe estar abierto para escritura.
 
 //lee desde el archivo los datos del Expediente
-void leerExpDeArchivo(Expediente &exp, FILE * f);
+void leerExpDeArchivo(Expediente &pExp, FILE * f);
 //PRECONDICION: El archivo debe estar abierto para lectura
 
 #endif // EXPEDIENTE_H_INCLUDED

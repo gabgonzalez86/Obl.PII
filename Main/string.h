@@ -5,7 +5,6 @@
 const int MAX = 80;
 typedef char * String;
 
-
 //crea un string vacío
 void strcrear (String &s);
 
@@ -21,8 +20,10 @@ void print (String s);
 //determina si los strings s1 y s2 son iguales
 boolean streq (String s1, String s2);
 
+//
 void strcop (String &s1,String s2);
 
+//
 int strlar (String s);
 
 //agrega los caracteres del string en el archivo

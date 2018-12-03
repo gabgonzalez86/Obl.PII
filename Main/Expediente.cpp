@@ -1,84 +1,83 @@
 #include "Expediente.h"
 
-void cargarExpediente(Expediente &exp, long codigo)
+long darCodigo(Expediente pExp)
 {
-    exp.codigo = codigo;
-
-    printf("Caratula: ");
-    strcrear(exp.caratula);
-    scan(exp.caratula);
-
-    printf("Nombre del escribana/o: ");
-    strcrear(exp.nombre);
-    scan(exp.nombre);
-
-    printf("Apellido del escribana/o: ");
-    strcrear(exp.apellido);
-    scan(exp.apellido);
-
-    printf("Cantidad de paginas: ");
-    scanf("%d", &exp.cantidadPaginas);
+    return pExp.codigo;
 }
 
-void mostrarExpediente (Expediente exp)
-{
-    printf("\n%ld", exp.codigo);
-    printf(" - ");
-    print(exp.caratula);
-    printf(" - ");
-    print(exp.nombre);
-    printf(" ");
-    print(exp.apellido);
-    printf(" - ");
-    printf("%d\n", exp.cantidadPaginas);
-}
-
-long darCodigo(Expediente exp)
-{
-    return exp.codigo;
-}
-
-int  darCantidadPaginas (Expediente exp)
-{
-    return exp.cantidadPaginas;
-}
-
-void darCaratula(Expediente exp, String &pCaratula)
+void darCaratula(Expediente pExp, String &pCaratula)
 {
     strcrear(pCaratula);
-    strcop(pCaratula, exp.caratula);
+    strcop(pCaratula, pExp.caratula);
 }
 
-void darNombreExpediente(Expediente exp, String &pNombre)
+void darNombreExpediente(Expediente pExp, String &pNombre)
 {
     strcrear(pNombre);
-    strcop(pNombre, exp.nombre);
+    strcop(pNombre, pExp.nombre);
 }
 
-
-void darApellidoExpediente(Expediente exp, String &pApellido)
+void darApellidoExpediente(Expediente pExp, String &pApellido)
 {
     strcrear(pApellido);
-    strcop(pApellido, exp.apellido);
+    strcop(pApellido, pExp.apellido);
 }
 
-void AgregarExpAArchivo(Expediente exp, FILE * f)
+int  darCantidadPaginas (Expediente pExp)
 {
-    agregarStringAArchivo(exp.caratula, f);
-    agregarStringAArchivo(exp.nombre, f);
-    agregarStringAArchivo(exp.apellido, f);
-    fwrite(&exp.codigo, sizeof(long), 1, f);
-    fwrite(&exp.cantidadPaginas, sizeof(int), 1, f);
+    return pExp.cantidadPaginas;
 }
 
-void leerExpDeArchivo(Expediente &exp, FILE * f)
+void cargarExpediente(Expediente &pExp, long pCodigo)
 {
-    strcrear(exp.caratula);
-    leerStringDeArchivo(exp.caratula, f);
-    strcrear(exp.nombre);
-    leerStringDeArchivo(exp.nombre, f);
-    strcrear(exp.apellido);
-    leerStringDeArchivo(exp.apellido, f);
-    fread(&exp.codigo, sizeof(long), 1, f);
-    fread(&exp.cantidadPaginas, sizeof(int), 1, f);
+    pExp.codigo = pCodigo;
+
+    printf("Caratula: ");
+    strcrear(pExp.caratula);
+    scan(pExp.caratula);
+
+    printf("Nombre del escribana/o: ");
+    strcrear(pExp.nombre);
+    scan(pExp.nombre);
+
+    printf("Apellido del escribana/o: ");
+    strcrear(pExp.apellido);
+    scan(pExp.apellido);
+
+    printf("Cantidad de paginas: ");
+    scanf("%d", &pExp.cantidadPaginas);
+}
+
+void mostrarExpediente (Expediente pExp)
+{
+    printf("\n%ld", pExp.codigo);
+    printf(" - ");
+    print(pExp.caratula);
+    printf(" - ");
+    print(pExp.nombre);
+    printf(" ");
+    print(pExp.apellido);
+    printf(" - ");
+    printf("%d\n", pExp.cantidadPaginas);
+}
+
+void AgregarExpAArchivo(Expediente pExp, FILE * f)
+{
+    agregarStringAArchivo(pExp.caratula, f);
+    agregarStringAArchivo(pExp.nombre, f);
+    agregarStringAArchivo(pExp.apellido, f);
+    fwrite(&pExp.codigo, sizeof(long), 1, f);
+    fwrite(&pExp.cantidadPaginas, sizeof(int), 1, f);
+}
+
+void leerExpDeArchivo(Expediente &pExp, FILE * f)
+{
+    strcrear(pExp.caratula);
+    leerStringDeArchivo(pExp.caratula, f);
+    strcrear(pExp.nombre);
+    leerStringDeArchivo(pExp.nombre, f);
+    strcrear(pExp.apellido);
+    leerStringDeArchivo(pExp.apellido, f);
+    fread(&pExp.codigo, sizeof(long), 1, f);
+    fread(&pExp.cantidadPaginas, sizeof(int), 1, f);
 }

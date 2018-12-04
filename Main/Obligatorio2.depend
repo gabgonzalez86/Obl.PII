@@ -206,3 +206,71 @@
 	"Arbol.h"
 	"Archivo.h"
 
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\arbol.cpp
+	"Arbol.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\arbol.h
+	"ListaRevision.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\listarevision.h
+	"Revision.h"
+	"Expediente.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\revision.h
+	"Fecha.h"
+	"Resultado.h"
+	"string.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\fecha.h
+	"Boolean.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\boolean.h
+	<stdio.h>
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\resultado.h
+	<stdio.h>
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\string.h
+	"Boolean.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\expediente.h
+	"string.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\archivo.cpp
+	"Archivo.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\archivo.h
+	"Arbol.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\expediente.cpp
+	"Expediente.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\listarevision.cpp
+	"ListaRevision.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\main.cpp
+	<iostream>
+	<stdio.h>
+	"Menu.h"
+	"Arbol.h"
+	"Archivo.h"
+
+1543871244 c:\users\heber\desktop\obl.pii-versionfinal\main\menu.h
+	"Boolean.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\menu.cpp
+	"Menu.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\resultado.cpp
+	"Resultado.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\revision.cpp
+	"Revision.h"
+
+1543871244 source:c:\users\heber\desktop\obl.pii-versionfinal\main\string.cpp
+	"string.h"
+	"boolean.h"
+
+1543890263 source:c:\users\heber\desktop\obl.pii-versionfinal\main\fecha.cpp
+	"Fecha.h"
+

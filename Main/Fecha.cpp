@@ -94,22 +94,22 @@ boolean esMenorIgual(Fecha pFec1, Fecha pFec2)
 {
   boolean  vMenorIgual = FALSE;
 
-    if(darAnio(pFec1) == darAnio(pFec2) && darMes(pFec1) == darMes(pFec2) && darDia(pFec1)== darDia(pFec2))
+    if(pFec1.anio == pFec2.anio && pFec1.mes == pFec2.mes && pFec1.dia == pFec2.dia)
        vMenorIgual = TRUE;
     else
-        if(darAnio(pFec1) < darAnio(pFec2))
+        if(pFec1.anio < pFec2.anio)
             vMenorIgual = TRUE;
         else
-            if(darAnio(pFec2) < darAnio(pFec1))
+            if(pFec2.anio < pFec1.anio)
                 vMenorIgual = FALSE;
             else
-                if(darMes(pFec1) < darMes(pFec2))
+                if(pFec1.mes < pFec2.mes)
                     vMenorIgual = TRUE;
                 else
-                    if(darMes(pFec2) < darMes(pFec1))
+                    if(pFec2.mes < pFec1.mes)
                        vMenorIgual = FALSE;
                      else
-                        if(darDia(pFec1) < darDia(pFec2))
+                        if(pFec1.dia < pFec2.dia)
                             vMenorIgual = TRUE;
                         else
                             vMenorIgual = FALSE;
@@ -121,22 +121,22 @@ boolean esMayorIgual(Fecha pFec1, Fecha pFec2)
 {
   boolean  vMayorIgual = FALSE;
 
-    if(darAnio(pFec1) == darAnio(pFec2) && darMes(pFec1) == darMes(pFec2) && darDia(pFec1)== darDia(pFec2))
+    if(pFec1.anio == pFec2.anio && pFec1.mes == pFec2.mes && pFec1.dia == pFec2.dia)
        vMayorIgual = TRUE;
     else
-        if(darAnio(pFec1)> darAnio(pFec2))
+        if(pFec1.anio > pFec2.anio)
             vMayorIgual = TRUE;
         else
-            if(darAnio(pFec2)> darAnio(pFec1))
+            if(pFec2.anio > pFec1.anio)
                 vMayorIgual = FALSE;
             else
-                if(darMes(pFec1)>darMes(pFec2))
+                if(pFec1.mes > pFec2.mes)
                     vMayorIgual = TRUE;
                 else
-                    if(darMes(pFec2)>darMes(pFec1))
+                    if(pFec2.mes > pFec1.mes)
                        vMayorIgual = FALSE;
                      else
-                        if(darDia(pFec1)>darDia(pFec2))
+                        if(pFec1.dia > pFec2.dia)
                             vMayorIgual = TRUE;
                         else
                             vMayorIgual = FALSE;

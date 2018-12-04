@@ -141,12 +141,18 @@ int main()
 
                     printf("\nIngrese el codigo del expediente: ");
                     scanf("%ld", &vCodigoexpediente);
-                    if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
-                    {
-                        listarRevisionesPorExpediente(vListaRevisiones, vCodigoexpediente);
-                    }
+                    if(listaVacia(vListaRevisiones))
+                       printf("\-No existen Revisiones asociadas al codigo ingresado.-\n");
                     else
-                        printf("\-No existen Revisiones asociadas al codigo ingresado.-\n");
+                    {
+                            if(existeExpediente(vArbolExpedientes, vCodigoexpediente))
+                            {
+                                listarRevisionesPorExpediente(vListaRevisiones, vCodigoexpediente);
+                            }
+                            else
+                                 printf("\-No existen Revisiones asociadas al codigo ingresado.-\n");       
+                    }
+                
                     break;
 
                 case 5:

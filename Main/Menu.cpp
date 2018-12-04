@@ -30,7 +30,7 @@ void mostrarSubMenuConsultas(int &pOpcion)
 {
         printf("\n1 - Contar expedientes por apellido de escribano.");
         printf("\n2 - Obtener codigo de expediente con mas revisiones.");
-        printf("\n3 - Cantidad de expedientes entre dos fechas.");
+        printf("\n3 - Cantidad de revisiones entre dos fechas.");
         printf("\n4 - Contar total de revisiones por tipo.");
         printf("\n5 - Volver.");
         printf("\nOpcion: ");

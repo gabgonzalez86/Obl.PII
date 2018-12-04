@@ -23,7 +23,7 @@ void darApellidoExpediente(Expediente pExp, String &pApellido)
     strcop(pApellido, pExp.apellido);
 }
 
-int  darCantidadPaginas (Expediente pExp)
+int darCantidadPaginas(Expediente pExp)
 {
     return pExp.cantidadPaginas;
 }

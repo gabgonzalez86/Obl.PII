@@ -15,20 +15,20 @@ void strdestruir (String &s)
 
 void scan (String &s)
 {
-    String aux = new char[MAX];
+    String vAux = new char[MAX];
     int i=0;
     char c;
     fflush(stdin);
     scanf ("%c", &c);
     while (c!= '\n' && i < MAX-1)
     {
-        aux[i] = c;
+        vAux[i] = c;
         i++;
         scanf ("%c", &c);
     }
-    aux[i] = '\0';
-    strcop (s,aux);
-    strdestruir (aux);
+    vAux[i] = '\0';
+    strcop (s,vAux);
+    strdestruir (vAux);
 }
 
 void print (String s)
@@ -44,24 +44,25 @@ void print (String s)
 boolean streq(String s1,String s2)
 {
     int i = 0;
-    boolean iguales = TRUE;
-    while (iguales && (s1[i] != '\0') && (s2[i] != '\0'))
+    boolean vIguales = TRUE;
+    while (vIguales && (s1[i] != '\0') && (s2[i] != '\0'))
     {
         if (s1[i] != s2[i])
-            iguales = FALSE;
+            vIguales = FALSE;
         i++;
     }
     if ((s1[i] != '\0') || (s2[i] != '\0'))
-        iguales = FALSE;
-    return iguales;
+        vIguales = FALSE;
+
+    return vIguales;
 }
 
 void strcop (String &s1,String s2)
 {
     int i = 0;
-    int largo = strlar(s2) + 1;
+    int vLargo = strlar(s2) + 1;
     delete [] s1;
-    s1 = new char[largo];
+    s1 = new char[vLargo];
     while (s2[i] != '\0')
     {
         s1[i] = s2[i];
@@ -92,14 +93,14 @@ void agregarStringAArchivo(String s, FILE * f)
 void leerStringDeArchivo (String &s, FILE * f)
 {
     int i=0;
-    String aux;
-    aux = new char[MAX];
-    fread(&aux[i], sizeof(char), 1, f);
-    while(!feof(f) && (aux[i] != '\0'))
+    String vAux;
+    vAux = new char[MAX];
+    fread(&vAux[i], sizeof(char), 1, f);
+    while(!feof(f) && (vAux[i] != '\0'))
     {
         i++;
-        fread(&aux[i], sizeof(char), 1, f);
+        fread(&vAux[i], sizeof(char), 1, f);
     }
-    strcop (s, aux);
-    delete [] aux;
+    strcop (s, vAux);
+    delete [] vAux;
 }

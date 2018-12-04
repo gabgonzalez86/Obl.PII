@@ -41,13 +41,13 @@ void cargarFecha(Fecha &pFec)
 //Muestra una fecha
 void mostrarFecha(Fecha pFec)
 {
-    printf("%d-%d-%d", pFec.dia, pFec.mes, pFec.anio);
+    printf("\n%d-%d-%d", pFec.dia, pFec.mes, pFec.anio);
 }
 
 //Verifica si la fecha ingresada es valida
 boolean validarFecha(Fecha pFec)
 {
-    boolean valida = FALSE;
+    boolean vValida = FALSE;
 
     switch (pFec.mes)
     {
@@ -58,91 +58,90 @@ boolean validarFecha(Fecha pFec)
         case 8:
         case 10:
         case 12: if (pFec.dia >= 1 && pFec.dia <= 31)
-                    valida = TRUE;
+                    vValida = TRUE;
                 else
-                    valida = FALSE;
+                    vValida = FALSE;
                 break;
         case 4:
         case 6:
         case 9:
         case 11: if (pFec.dia >= 1 && pFec.dia <= 30)
-                   valida = TRUE;
+                   vValida = TRUE;
                 else
-                   valida = FALSE;
+                   vValida = FALSE;
                 break;
 
         case 2: if (pFec.anio % 4 == 0)
                 {
                     if (pFec.dia >= 1 && pFec.dia <= 29)
-                       valida = TRUE;
+                       vValida = TRUE;
                     else
-                       valida = FALSE;
+                       vValida = FALSE;
                 }
                 else
                 {
                     if (pFec.dia >= 1 && pFec.dia <= 28)
-                        valida = TRUE;
+                        vValida = TRUE;
                     else
-                        valida = FALSE;
+                        vValida = FALSE;
                 }
                 break;
-
     }
-    return valida;
+    return vValida;
 }
 
 boolean esMenorIgual(Fecha pFec1, Fecha pFec2)
 {
-  boolean  menorIgual = FALSE;
+  boolean  vMenorIgual = FALSE;
 
     if(darAnio(pFec1) == darAnio(pFec2) && darMes(pFec1) == darMes(pFec2) && darDia(pFec1)== darDia(pFec2))
-       menorIgual = TRUE;
+       vMenorIgual = TRUE;
     else
         if(darAnio(pFec1) < darAnio(pFec2))
-            menorIgual = TRUE;
+            vMenorIgual = TRUE;
         else
             if(darAnio(pFec2) < darAnio(pFec1))
-                menorIgual = FALSE;
+                vMenorIgual = FALSE;
             else
                 if(darMes(pFec1) < darMes(pFec2))
-                    menorIgual = TRUE;
+                    vMenorIgual = TRUE;
                 else
                     if(darMes(pFec2) < darMes(pFec1))
-                       menorIgual = FALSE;
+                       vMenorIgual = FALSE;
                      else
                         if(darDia(pFec1) < darDia(pFec2))
-                            menorIgual = TRUE;
+                            vMenorIgual = TRUE;
                         else
-                            menorIgual = FALSE;
+                            vMenorIgual = FALSE;
 
-    return menorIgual;
+    return vMenorIgual;
 }
 
 boolean esMayorIgual(Fecha pFec1, Fecha pFec2)
 {
-  boolean  mayorIgual = FALSE;
+  boolean  vMayorIgual = FALSE;
 
     if(darAnio(pFec1) == darAnio(pFec2) && darMes(pFec1) == darMes(pFec2) && darDia(pFec1)== darDia(pFec2))
-       mayorIgual = TRUE;
+       vMayorIgual = TRUE;
     else
         if(darAnio(pFec1)> darAnio(pFec2))
-            mayorIgual = TRUE;
+            vMayorIgual = TRUE;
         else
             if(darAnio(pFec2)> darAnio(pFec1))
-                mayorIgual = FALSE;
+                vMayorIgual = FALSE;
             else
                 if(darMes(pFec1)>darMes(pFec2))
-                    mayorIgual = TRUE;
+                    vMayorIgual = TRUE;
                 else
                     if(darMes(pFec2)>darMes(pFec1))
-                       mayorIgual = FALSE;
+                       vMayorIgual = FALSE;
                      else
                         if(darDia(pFec1)>darDia(pFec2))
-                            mayorIgual = TRUE;
+                            vMayorIgual = TRUE;
                         else
-                            mayorIgual = FALSE;
+                            vMayorIgual = FALSE;
 
-    return mayorIgual;
+    return vMayorIgual;
 }
 
 void agregarFechaAArchivo(Fecha pFecha, FILE * f)

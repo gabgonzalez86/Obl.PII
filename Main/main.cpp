@@ -24,10 +24,10 @@ int main()
     crearLista(vListaRevisiones);
 
     //Lectura de datos desde archivo
-    if(existeArchivoExpediente("Expedientes.dat"))
+    if(existeArchivo("Expedientes.dat"))
         leerArbolDeArchivo(vArbolExpedientes, "Expedientes.dat");
 
-    if(existeRevision("Revisiones.dat"))
+    if(existeArchivo("Revisiones.dat"))
         leerListaDeArchivo(vListaRevisiones, "Revisiones.dat");
 
     do
@@ -63,7 +63,12 @@ int main()
                 printf("Ingrese la fecha de revision en el siguiente formato dd mm aaaa: ");
                 cargarFecha(vFchRevision);
                 //Controlo que la fecha sea mayor o igual a la ingresada en la ultima revision
-                if(esMayorIgual(vFchRevision, fechaPrimerElementoListado(vListaRevisiones)))
+                if(listaVacia(vListaRevisiones))
+                {
+                    cargarRevision(vRevision, vCodigoexpediente, vFchRevision);
+                    agregarRevisionFront(vListaRevisiones, vRevision);
+                }
+                else if(esMayorIgual(vFchRevision, fechaPrimerElementoListado(vListaRevisiones)))
                 {
                     cargarRevision(vRevision, vCodigoexpediente, vFchRevision);
                     agregarRevisionFront(vListaRevisiones, vRevision);
@@ -199,19 +204,24 @@ int main()
 
                     Fecha vFechaDesde,
                           vFechaHasta;
-
-                    printf("\nIngrese la fecha desde (dd mm aaaa): ");
-                    cargarFecha(vFechaDesde);
-
-                    printf("\nIngrese la fecha hasta (dd mm aaaa): ");
-                    cargarFecha(vFechaHasta);
-
-                    if(esMayorIgual(vFechaHasta, vFechaDesde))
+                    if(!listaVacia(vListaRevisiones))
                     {
-                        printf("-Se realizaron %d revisiones durante ese periodo.-\n", cantidadRevisionesPorFecha(vListaRevisiones, vFechaDesde, vFechaHasta));
+                        printf("\nIngrese la fecha desde (dd mm aaaa): ");
+                        cargarFecha(vFechaDesde);
+
+                        printf("\nIngrese la fecha hasta (dd mm aaaa): ");
+                        cargarFecha(vFechaHasta);
+
+                        if(esMayorIgual(vFechaHasta, vFechaDesde))
+                        {
+                            printf("-Se realizaron %d revisiones durante ese periodo.-\n", cantidadRevisionesPorFecha(vListaRevisiones, vFechaDesde, vFechaHasta));
+                        }
+                        else
+                            printf("\n-La fecha hasta ingresada debe ser mayor a la fecha desde.-\n") ;
                     }
                     else
-                        printf("\n-La fecha hasta ingresada debe ser mayor a la fecha desde.-\n") ;
+                        printf("\n-No existen Revisiones en el sistema, antes de realizar la consulta cargue las mismas.-\n") ;
+
                     break;
 
                 case 4:
@@ -243,15 +253,17 @@ int main()
 
             vSalir = TRUE;
 
-            if(existeArchivoExpediente("Expedientes.dat"))
+            if(existeArchivo("Expedientes.dat"))
                 agregarArbolAArchivo(vArbolExpedientes,"Expedientes.dat");
             else
-                fd = fopen("Expedientes.dat", "wb");
+                crearArchivo("Expedientes.dat", fd);
+            agregarArbolAArchivo(vArbolExpedientes,"Expedientes.dat");
 
-            if(existeRevision("Revisiones.dat"))
-                agregarArbolAArchivo(vArbolExpedientes,"Expedientes.dat");
+            if(existeArchivo("Revisiones.dat"))
+                agregarListaAArchivo(vListaRevisiones,"Revisiones.dat");
             else
-                fd = fopen("Revisiones.dat", "wb");
+                crearArchivo("Revisiones.dat", fd);
+            agregarListaAArchivo(vListaRevisiones,"Revisiones.dat");
 
             break;
 

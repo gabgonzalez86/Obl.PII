@@ -7,11 +7,11 @@ void crearLista(Lista &l)
 
 boolean listaVacia(Lista l)
 {
-    boolean es = FALSE;
+    boolean vEs = FALSE;
     if(l == NULL)
-        es = TRUE;
+        vEs = TRUE;
 
-    return es;
+    return vEs;
 }
 
 Fecha fechaPrimerElementoListado(Lista l)

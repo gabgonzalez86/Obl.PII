@@ -2,10 +2,10 @@
 #define ARCHIVO_H_INCLUDED
 #include "Arbol.h"
 
-//Devuelve si existe el archivo
-boolean existeArchivoExpediente(String pNomArch);
+//Crea archivo
+void crearArchivo(String pNombAch, FILE * fd);
 
 //Devuelve si existe el archivo
-boolean existeRevision(String pNomArch);
+boolean existeArchivo(String pNomArch);
 
 #endif // ARCHIVO_H_INCLUDED

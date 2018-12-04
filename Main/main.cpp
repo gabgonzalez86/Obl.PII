@@ -237,9 +237,9 @@ int main()
                         vCntPendientes     = 0;
 
                     cantidadRevisionesPorTipo(vListaRevisiones, vCntSatisfactorias, vCntIncompletas, vCntPendientes);
-                    printf("\n-Total de revisiones satisfactorias: %d -", vCntSatisfactorias);
-                    printf("\nTotal de revisiones incompletas: %d -", vCntIncompletas);
-                    printf("\nTotal de revisiones pendientes: %d -\n", vCntPendientes);
+                    printf("\nTotal de revisiones satisfactorias: %d.", vCntSatisfactorias);
+                    printf("\nTotal de revisiones incompletas: %d.", vCntIncompletas);
+                    printf("\nTotal de revisiones pendientes: %d.\n", vCntPendientes);
                 }
                 break;
 
